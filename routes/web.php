@@ -17,6 +17,7 @@ use App\http\Controllers\landing\CartController;
 use App\http\Controllers\landing\TransaksiController;
 use App\http\Controllers\landing\PesananController;
 use App\http\Controllers\landing\WelcomeController;
+use App\http\Controllers\landing\DetailpesananController;
 
 // dashboard admin
 use App\http\Controllers\admin\AdminController;
@@ -27,9 +28,12 @@ use App\http\Controllers\admin\KategoriTourController;
 
 // dashboard biro
 use App\http\Controllers\dashboard\DashboardController;
-use App\http\Controllers\dashboard\UpdatetourController;
-use App\http\Controllers\dashboard\TambahtourController;
-use App\http\Controllers\dashboard\EdittourController;
+use App\http\Controllers\dashboard\DatatourController;
+use App\http\Controllers\dashboard\ManajemenorderController;
+use App\http\Controllers\dashboard\DetaildatatourController;
+use App\http\Controllers\dashboard\ProfileController;
+use App\http\Controllers\dashboard\EditprofileController;
+use App\http\Controllers\dashboard\DetailorderController;
 
 
 
@@ -51,17 +55,34 @@ Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi
 Route::get('/detail-tour', [DetailtourController::class, 'index'])->name('detail-tour.index');
 Route::get('/pesanan', [PesananController::class, 'index'])->name('pesanan.index');
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
+Route::get('/detail-pesanan', [DetailpesananController::class, 'index'])->name('detail-pesanan.index');
 
 //dashboard Admin
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::get('/manajementour', [ManajemenTourController::class, 'index'])->name('manajementour.index');
 Route::get('/manajemenuserbiro', [ManajemenuserbiroController::class, 'index'])->name('manajemenuserbiro.index');
 Route::get('/manajemenusermember', [ManajemenusermemberController::class, 'index'])->name('manajemenusermember.index');
-Route::get('/kategoritour', [KategoriTourController::class, 'index'])->name('kategoritour.index');
 
 // dashboard biro
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-Route::get('/updatetour', [UpdatetourController::class, 'index'])->name('updatetour.index');
-Route::get('/tambahtour', [TambahtourController::class, 'index'])->name('tambahtour.index');
-Route::get('/edittour', [EdittourController::class, 'index'])->name('edittour.index');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+Route::get('/editprofile', [EditprofileController::class, 'index'])->name('editprofile.index');
+Route::get('/manajemenorder', [ManajemenorderController::class, 'index'])->name('manajemenorder.index');
+Route::get('/detail-datatour', [DetaildatatourController::class, 'index'])->name('detail-datatour.index');
+Route::get('/detail-order', [DetailorderController::class, 'index'])->name('detail-order.index');
 
+// kategori tour
+Route::get('/kategoritour', [KategoritourController::class, 'index'])->name('kategoritour.index');
+Route::get('/tambahkategori', [KategoritourController::class, 'tambah'])->name('tambahkategori.index');
+Route::post('/tambahblog', [KategoritourController::class, 'store'])->name('Kategori.index');
+Route::get('/kategoritour/edit/{id}', [KategoritourController::class, 'edit'])->name('editkategori.index');
+Route::put('/kategoritour/update/{id}', [KategoritourController::class, 'update'])->name('updateKategori.index');
+Route::get('/kategoritour/hapus/{id}', [KategoritourController::class, 'hapus'])->name('hapus.index');
+
+// data tour
+Route::get('/datatour', [DatatourController::class, 'index'])->name('datatour.index');
+Route::get('/tambahtour', [DatatourController::class, 'tambah'])->name('tambahtour.index');
+Route::post('/tambahtour', [DatatourController::class, 'store'])->name('Tour.index');
+Route::get('/datatour/edit/{id}', [DatatourController::class, 'edit'])->name('edittour.index');
+Route::put('/datatour/update/{id}', [DatatourController::class, 'update'])->name('updateTour.index');
+Route::get('/datatour/hapus/{id}', [DatatourController::class, 'hapus'])->name('hapus.index');

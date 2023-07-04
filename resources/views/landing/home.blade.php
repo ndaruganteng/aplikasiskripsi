@@ -109,10 +109,40 @@
         <section class="font-inter" >
             <div class="container px-24 py-24 mx-auto">
                 <div class="flex flex-wrap w-full mb-10 ">
-                    <div class="container mx-auto flex flex-col px-5 ustify-center items-center">
+                    <div class="container mx-auto flex flex-col px-5 justify-center items-center">
                         <div class="w-full md:w-2/3 flex flex-col mb-10 items-center text-center">
-                            <h1 class="title-font sm:text-3xl text-2xl  font-semibold text-gray-900">PAKET TOUR TERBARU</h1>
+                            <h1 class="title-font sm:text-3xl text-2xl  font-bold text-gray-900">PAKET TOUR TERBARU</h1>
                         </div>
+                        <div class="flex w-full mb-10 justify-center items-end">
+                            <div class=" mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <input type="text" id="hero-field" name="hero-field" placeholder="Cari Tour Disini" class="w-full bg-gray-100 bg-opacity-50 rounded-lg focus:ring-2 focus:ring-yellow-200 focus:bg-transparent border border-gray-300 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                            <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none rounded-lg text-lg">Button</button>
+                        </div>
+                        <!-- <div class="px-40 pt-4 flex w-full justify-center items-end">
+                                <div class="  w-full lg:w-1/3 px-4 py-2">
+                                    <div class="relative w-full mb-3  rounded-lg">
+                                        <label for="tanggal_kembali"
+                                            class="block uppercase text-blueGray-600 text-xs font-semibold mb-2">tanggal 
+                                            Berangkat</label>
+                                        <input type="date" id="tanggal_kembali" name="tanggal_kembali"
+                                            min="<?= date('Y-m-d') ?>"
+                                            class="border px-3 py-3  text-blueGray-600 border-gray-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-15"
+                                            placeholder="Tanggal Kembali" onchange="hitungTotalHarga()" required>
+                                    </div>
+                                </div>
+                                <div class=" w-full lg:w-1/3 px-4 py-2">
+                                    <div class="w-full mb-3 rounded-lg">
+                                        <label for="tanggal_kembali"
+                                            class="block uppercase text-blueGray-600 text-xs font-semibold mb-2">
+                                            Tanggal Berakhir</label>
+                                        <input type="date" id="tanggal_kembali" name="tanggal_kembali"
+                                            min="<?= date('Y-m-d') ?>"
+                                            class="border  px-3 py-3  text-gray-900 border-gray-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-15"
+                                            placeholder="Tanggal Kembali" onchange="hitungTotalHarga()" required>
+                                    </div>
+                                </div>                  
+                        </div> -->      
                     </div>
                     <div class="flex flex-wrap -m-4 font-inter">
                         <div class="xl:w-1/4 md:w-1/2 sm:w-1/1 p-4 mx-auto">                           

@@ -42,119 +42,108 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="content-header">
-                        <div class="container-fluid">
+                    <div class="container-fluid">
                         <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h2 class="m-0">View Data Tour</h2>
+                            <h1 class="m-0">Manajemen Order</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">View Data Tour</li>
+                            <li class="breadcrumb-item active">Manajemen Order</li>
                             </ol>
                         </div>
                         </div>
-                        </div>
                     </div>
-                    <div class="content ">
+                    </div>
+                    <div class="content">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="card">
+                                    <div class="card ">
                                         <div class="row m-3">
                                             <div class="col-sm-6">
-                                                <h3 class="text-uppercase"> View Data Tour</h3>
+                                                <h3 class="text-uppercase mt-3"> Data Order</h3>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="float-sm-right">
-                                                    <a href="{{ route('tambahtour.index') }}">
-                                                        <button
-                                                            type="submit"
-                                                            class="btn btn-dark flex"
-                                                            value="Submit"
-                                                        >
-                                                            Tambah Tour
-                                                            <i class="fa-solid fa-plus"></i>
-                                                        </button>
-                                                    </a>
+                                                    <div class=" #">
+                                                        <div class="container-fluid">
+                                                            <form class="d-flex">
+                                                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                                <button class="ml-3  btn btn-dark" type="submit">Search</button>
+                                                            </form>
+                                                        </div>
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- /.card-header -->
                                         <div class="card-body table-responsive">
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr class="text-center fs-6">
-                                                        <th>Image</th>
-                                                        <th>Nama tour</th>
-                                                        <th>Durasi</th>
-                                                        <th>Harga </th>
-                                                        <th>Kuota </th>
+                                                        <th>Kode Booking</th>
+                                                        <th>Nama Tour</th>                                
+                                                        <th>Jumlah Orang</th>                                
+                                                        <th>Waktu Pemesanan</th>
+                                                        <th>Status Pemesanan</th>
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
-                                                
                                                 <tbody class="fs-6">
                                                     <tr class="text-center text-break">
-                                                        <td>
-                                                            <img
-                                                                src="images/background/paket.jpg"
-                                                                alt=""
-                                                                style="width:50px"
-                                                            />
-                                                        </td>   
-                                                        <td>1</td>
-                                                        <td>2</td>
-                                                        <td>3</td>
-                                                        <td>4</td>
+                                                        <td>1234567890</td>
+                                                        <td>Open Trip Tour Wisata Labuan Bajo</td>
+                                                        <td>20</td>
+                                                        <td>26-02-2023 02.00</td>
+                                                        <td>Berhasil</td>
                                                         <td>
                                                             <div class="btn flex">
-                                                                <a
-                                                                    href="{{ route('edittour.index') }}"
-                                                                >
-                                                                    <button
-                                                                        type="button"
-                                                                        class="btn btn-warning text-white"
-                                                                    >
-                                                                        <i
-                                                                            class="fa-solid fa-pen-to-square"
-                                                                        ></i>
+                                                                <a href="{{ route('detail-order.index') }}">
+                                                                    <button type="submit"  class="btn btn-primary"  value="Submit">
+                                                                        <i class="fa-solid fa-eye"></i>
                                                                     </button>
                                                                 </a>
-                                                                <a
-                                                                    href="#"
-                                                                >
-                                                                    <button
-                                                                        type="button"
-                                                                        class="btn btn-danger"
-                                                                    >
-                                                                        <i
-                                                                            class="fa-solid fa-trash-can"
-                                                                        ></i>
+                                                                <a href="#">
+                                                                    <button type="button"  class="btn btn-danger">
+                                                                        <i class="fa-solid fa-trash-can"></i>
                                                                     </button>
                                                                 </a>
-                                                                <a
-                                                                    href="#"
-                                                                >
-                                                                    <button
-                                                                        type="submit"
-                                                                        class="btn btn-primary"
-                                                                        value="Submit"
-                                                                    >
-                                                                        <i
-                                                                            class="fa-solid fa-eye"
-                                                                        ></i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center text-break">
+                                                        <td>1234567890</td>
+                                                        <td>Open Trip Tour Wisata Labuan Bajo</td>
+                                                        <td>20</td>
+                                                        <td>26-02-2023 02.00</td>
+                                                        <td>Gagal</td>
+                                                        <td>
+                                                            <div class="btn flex">
+                                                                <a href="{{ route('detail-order.index') }}">
+                                                                    <button type="submit"  class="btn btn-primary"  value="Submit">
+                                                                        <i class="fa-solid fa-eye"></i>
+                                                                    </button>
+                                                                </a>
+                                                                <a href="#">
+                                                                    <button type="button"  class="btn btn-danger">
+                                                                        <i class="fa-solid fa-trash-can"></i>
                                                                     </button>
                                                                 </a>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
-
                                             </table>
-                                            <div class="pt-3">
-
-                                            </div>
+                                        </div>
+                                        <div class="card-footer clearfix">
+                                            <ul class="pagination pagination-sm m-0 float-right">
+                                                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +153,6 @@
                 </div>
                 @include('dashboard.footer')
             </div>
-
         </div>
     </div>
   <!-- container-scroller -->

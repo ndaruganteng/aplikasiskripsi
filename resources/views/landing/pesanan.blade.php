@@ -52,9 +52,9 @@
                                 <th scope="col" class="px-6 py-3 text-center">
                                     Status Transaksi
                                 </th>
-                                <!-- <th scope="col" class="px-6 py-3 text-center">
-                                    Lihat Tiket
-                                </th> -->
+                                <th scope="col" class="px-6 py-3 text-center">
+                                    <span class="sr-only">Detail Pesanan</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -78,11 +78,11 @@
                                     IDR 8.800.000 
                                 </td>
                                 <td class="px-6 py-4  text-center font-semibold text-gray-900 dark:text-white">
-                                    Sukses 
+                                    Berhasil 
                                 </td>
-                                <!-- <td class="px-6 py-4  text-center font-semibold  dark:text-white">
-                                    <button type="button" class=" text-white bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-6 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">Tiket</button>
-                                </td> -->
+                                <td class="px-6 py-4  text-center font-semibold  dark:text-white">
+                                    <a href="{{ route('detail-pesanan.index') }}" type="button" class=" text-white bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-6 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">Detail</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

@@ -8,13 +8,13 @@
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link " href="{{ route('updatetour.index') }}">
+              <a class="nav-link " href="{{ route('datatour.index') }}">
                   <i class="fa-solid fa-shop menu-icon"></i>
                   <span class="menu-title">Tour</span>
               </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link " href="#">
+              <a class="nav-link " href="{{ route('manajemenorder.index') }}">
                   <i class="fa-solid fa-cart-shopping menu-icon"></i>
                   <span class="menu-title">Order</span>
               </a>
