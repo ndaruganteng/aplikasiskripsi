@@ -63,7 +63,7 @@
                                     <div class="card ">
                                     <div class="row m-3">
                                             <div class="col-sm-6">
-                                                <h3 class="text-uppercase mt-3"> Data Konsumen</h3>
+                                                <h3 class="text-uppercase mt-3"> Data Wisatawan</h3>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="float-sm-right">
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                         <div class="card-body table-responsive">
-                                            <table class="table table-striped">
+                                            <table class="table ">
                                                 <thead>
                                                     <tr class="text-center fs-6">
                                                         <th>Image</th>
@@ -122,15 +122,6 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                        <div class="card-footer clearfix">
-                                            <ul class="pagination pagination-sm m-0 float-right">
-                                                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">»</a></li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>

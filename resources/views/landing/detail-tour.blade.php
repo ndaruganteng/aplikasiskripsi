@@ -18,13 +18,13 @@
   <body class="bg-gray-100">
 
 
-    <section class="text-gray-600 body-font overflow-hidden">
+    <section id="{{$detail_tour->namatour}}" class="text-gray-600 body-font overflow-hidden">
       <div class="container px-5 pt-16 mx-auto">
         <div class="lg:w-4/5 mx-auto flex flex-wrap ">
-          <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="images/background/paket.jpg">
+          <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{asset('storage/image/tour/'.$detail_tour->image)}}">
           <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Wisata Alam</span>
-            <h1 class="text-gray-900 text-3xl title-font font-medium mb-2">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h1>
+            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ $detail_tour->kategori }}</span>
+            <h1 class="text-gray-900 text-3xl title-font font-medium mb-2">{{ $detail_tour->namatour }}</h1>
             <div class="flex mb-4">
               <span class="flex items-center">
                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
@@ -45,11 +45,11 @@
                 <span class="text-gray-600 ml-3">4 Reviews</span>
               </span>
             </div>  
-            <p class="leading-relaxed mt-4 mb-2 text-lg"> <span class="font-bold text-base">Highlight </span> : Sailling Pulau Kelor, Pulau Manjarite, Pulau Kalong, Explore pulau Padar, Snorkelling Pulau Sebayur</p>
-            <p class="leading-relaxed mb-2 text-lg"> <span class="font-bold text-base">Kuota </span> : 40 Orang </p>
-            <p class="leading-relaxed  mb-2 text-lg"> <span class="font-bold text-base">Tanggal Berangkat </span> : 10 Juli 2023 </p>
-            <p class="leading-relaxed  mb-2 text-lg"> <span class="font-bold text-base">Tanggal Berakhir </span> : 11 Juli 2023 </p>
-            <p class="text-2xl my-4 font-bold text-yellow-600 ">IDR 8.250.000/pax</p>
+            <p class="leading-relaxed mt-4 mb-2 text-lg"> <span class="font-bold text-base">Highlight </span> : {{ $detail_tour->highlight }}</p>
+            <p class="leading-relaxed mb-2 text-lg"> <span class="font-bold text-base">Kuota </span> : {{ $detail_tour->kuota }} </p>
+            <p class="leading-relaxed  mb-2 text-lg"> <span class="font-bold text-base">Tanggal Berangkat </span> : {{ $detail_tour->tanggalberangkat }} </p>
+            <p class="leading-relaxed  mb-2 text-lg"> <span class="font-bold text-base">Tanggal Berakhir </span> : {{ $detail_tour->tanggalberakhir }} </p>
+            <p class="text-2xl my-4 font-bold text-yellow-600 ">Rp {{ $detail_tour->harga }}</p>
             <div class="relative my-4">
               <input type="number" id="visitors" placeholder="jumlah orang" class="bg-white border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
             </div>           
@@ -67,9 +67,9 @@
           <div class="p-4 w-full">
             <div class="h-full bg-white p-8 rounded">
               <h1 class="text-3xl pb-4 font-semibold">Deskripsi</h1>
-              <p class="leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt delectus error corporis ab itaque rerum qui consectetur maxime magni quibusdam temporibus a provident rem odio, accusamus fugiat quaerat perferendis? Odit, est ea. Repudiandae molestiae illo facere, voluptas non vel voluptates amet dolores nihil, adipisci, soluta neque ad esse dolorum numquam.</p>
+              <p class="leading-relaxed mb-6">{!! $detail_tour->deskripsi !!}</p>
               <h1 class="text-3xl pb-4 font-semibold">Fasilitas</h1>
-              <p class="leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt delectus error corporis ab itaque rerum qui consectetur maxime magni quibusdam temporibus a provident rem odio, accusamus fugiat quaerat perferendis? Odit, est ea. Repudiandae molestiae illo facere, voluptas non vel voluptates amet dolores nihil, adipisci, soluta neque ad esse dolorum numquam.</p>
+              <p class="leading-relaxed mb-6">{!! $detail_tour->fasilitas !!}</p>
             </div>
           </div>
         </div>
@@ -83,13 +83,10 @@
             <div class=" bg-white p-8 rounded">
               <h1 class="text-3xl pb-4 font-semibold">Detail Lokasi</h1>
               <div class="w-full h-72 bg-gray-300  rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-                  <!-- <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" 
-                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63378.67394922582!2d109.07603971807929!3d-6.870568940706868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9dfbf3264c3%3A0x3027a76e352bbe0!2sTegal%2C%20Kota%20Tegal%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1688413102726!5m2!1sid!2sid" 
-                      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                  </iframe> -->
                 <div class="absolute inset-0 w-full h-full ">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.1849203713914!2d109.107594!3d-6.868432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fb9e2805c1c1b%3A0xe3e61e1ae59106ff!2sPoliteknik%20Harapan%20Bersama!5e0!3m2!1sid!2sid!4v1688427891467!5m2!1sid!2sid" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>

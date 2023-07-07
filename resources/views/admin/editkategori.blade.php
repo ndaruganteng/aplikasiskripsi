@@ -71,7 +71,7 @@
                                             <input type="hidden" name="id" value="{{ $kategori->id }}">
                                                 <div class="form-group">
                                                     <label for="nama">Image</label>
-                                                    <input type="file" class="form-control"  required="required"  value="{{ $kategori->image}}" name="image">
+                                                    <input type="file" class="form-control"  value="{{ $kategori->image}}" name="image">
                                                     <p class="fst-italic text-secondary">size foto maksimal 2 mb dan extensi jpg, png, jpeg</p>
                                                 </div>
                                                 <div class="form-group">

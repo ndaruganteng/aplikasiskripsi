@@ -49,7 +49,7 @@
 
         <!-- hero -->
         <section class="text-gray-600 body-font">
-            <div class="container mx-auto flex px-24 py-10 md:flex-row flex-col items-center">
+            <div class="container mx-auto flex px-24 py-24 md:flex-row flex-col items-center">
                 <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <h1 class="title-font sm:text-4xl xl:text-7xl mb-4 font-bold text-gray-900">Explore A New <br class="hidden lg:inline-block">World.
                     </h1>
@@ -66,7 +66,7 @@
         <!-- hero -->
 
 
-        <section class="text-gray-600 body-font">
+        <!-- <section class="text-gray-600 body-font">
             <div class="container px-24 pt-10 mx-auto ">
                 <div class="flex flex-wrap -m-2 ">
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full   ">
@@ -95,10 +95,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Card -->
-        <section class="font-inter" >
+        <!-- <section class="font-inter" >
             <div class="container px-24 py-24 mx-auto">
                 <div class="flex flex-wrap w-full mb-10 ">
                     <div class="container mx-auto flex flex-col px-5 ustify-center items-center">
@@ -227,7 +227,7 @@
                     <a href ="#" class="flex mx-auto mt-12 text-white bg-yellow-500  py-2 px-8 focus:outline-none hover:text-white hover:bg-gray-900 rounded-lg text-lg">Jelajah Lainnya</a>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Card -->
 
         <!-- footer -->

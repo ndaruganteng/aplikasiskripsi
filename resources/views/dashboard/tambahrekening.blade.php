@@ -46,11 +46,11 @@
                         <div class="container-fluid">
                             <div class="row mb-3">
                                 <div class="col-sm-6">
-                                    <h2 class="m-0 ">Tambah Data Tour</h2>
+                                    <h3 class="m-0 ">Tambah Data Tour</h3>
                                 </div>
                                 <div class="col-sm-6">
                                     <ol class="breadcrumb float-sm-right">
-                                        <li class="breadcrumb-item"><a href="{{ route('datatour.index') }}"><- Kembali</a></li>
+                                        <li class="breadcrumb-item"><a href="{{ route('datarekening.index') }}"><- Kembali</a></li>
                                     </ol>
                                 </div>
                             </div>
@@ -64,59 +64,35 @@
                                         <div class="card-header">
                                             <h3 class="text-center ">Input Data Tour</h3>
                                         </div>
-                                        <form action="{{ route('Tour.index') }}" method="post" enctype="multipart/form-data">
+                                        <form action="{{ route('Rekening.index') }}" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="nama">Image</label>
-                                                    <input type="file" class="form-control"  required="required"  name="image">
+                                                    <input type="file" class="form-control"  required="required"  name="imagerek">
                                                     <p class="fst-italic text-secondary">size foto maksimal 2 mb dan extensi jpg, png, jpeg</p>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="nama biro">Nama Biro</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Nama Biro" required="required" name="namabiro">
+                                                    <label for="nama rekening">Nama rekening</label>
+                                                    <input type="text" class="form-control"  placeholder="Masukan Nama Rekening" required="required" name="namarekening">
+                                                </div>
+                                                <!-- <div class="form-group">
+                                                    <label for="nama bank">Minimal</label>
+                                                    <select class="form-control select2 select2-hidden-accessible" type="text" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                        <option selected="selected" data-select2-id="3">Nama Bank</option>
+                                                        <option data-select2-id="82">Bank BCA</option>
+                                                        <option data-select2-id="83">Bank BRI</option>
+                                                        <option data-select2-id="84">Bank BNI</option>
+                                                        <option data-select2-id="85">Bank Mandiri</option>
+                                                    </select>                                                 
+                                                </div> -->
+                                                <div class="form-group">
+                                                    <label for="nama bank">Nama Bank</label>
+                                                    <input type="text" class="form-control"  placeholder="Masukan Nama Bank" required="required" name="namabank">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="nama tour">Nama Tour</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Judul Tour" required="required" name="namatour">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="Kategori">Kategori</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Kategori Tour" required="required" name="kategori">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="highlight">Highlight</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Highlight Tour" required="required" name="highlight">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="kuota">Kuota</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Kuota Tour" required="required" name="kuota">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="tanggal berangkat">Tanggal Berangkat</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Tanggal Berangkat" required="required" name="tanggalberangkat">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="tanggal berakhir">Tanggal Berakhir</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Tanggal Berakhir" required="required" name="tanggalberakhir">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="harga">Harga </label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Harga Tour" required="required" name="harga">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="deskripsi">Description</label>
-                                                    <input id="deskripsi" type="hidden" name="deskripsi" >
-                                                    <trix-editor input="deskripsi"></trix-editor>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="fasilitas">Fasilitas</label>
-                                                    <input id="fasilitas" type="hidden" name="fasilitas" >
-                                                    <trix-editor input="fasilitas"></trix-editor>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="lokasi">Link Lokasi</label>
-                                                    <input type="text" class="form-control"  placeholder="Masukan Link Lokasi Tour" required="required" name="lokasi">
+                                                    <label for="nomor rekening">Nomor rekening</label>
+                                                    <input type="text" class="form-control"  placeholder="Masukan Nomor Rekening " required="required" name="nomorrekening">
                                                 </div>
                                                 <div class=" mx-auto">
                                                     <button type="submit" class="btn btn-dark " value="Simpan Data">Simpan</button>

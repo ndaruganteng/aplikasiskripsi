@@ -104,12 +104,33 @@
                                             <h4 class="#">Bukti Transfer :</h4>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <a href="images/background/bukti.jpg?bukti=1" target="blank" data-toggle="lightbox" data-title="sample 9 - red" data-gallery="gallery">
+                                                    <!-- <a href="images/background/bukti.jpg?bukti=1" target="blank" data-toggle="lightbox" data-title="sample 9 - red" data-gallery="gallery">
                                                         <img src="images/background/bukti.jpg?bukti=1" class="img-fluid mb-2" alt="red sample">
-                                                    </a>
+                                                    </a> -->
+                                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#buktiModal">
+                                                                <i class="fa-solid fa-image"></i>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>  
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="buktiModal" tabindex="-1" role="dialog" aria-labelledby="buktiModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="buktiModalLabel">Image Bukti Transfer </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        <div class="modal-body">
+                                            <!-- Formulir Edit Data Mahasiswa -->
+                                            <div class="img-fluid">
+                                                <img src="images/background/bukti.jpg" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

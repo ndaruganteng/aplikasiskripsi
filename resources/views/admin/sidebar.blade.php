@@ -33,6 +33,12 @@
                   <span class="menu-title">Kategori Tour</span>
               </a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link " href="{{ route('requestmitra.index') }}">
+                  <i class="fa-sharp fa-solid fa-bookmark menu-icon"></i>
+                  <span class="menu-title">Request Mitra</span>
+              </a>
+          </li>
         </ul>
       </nav>
       <!-- partial -->

@@ -88,20 +88,18 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <div class="card-body table-responsive">
-                                            <table class="table table-striped ">
+                                            <table class="table">
                                                 <thead>
                                                     <tr class="text-center fs-6">
                                                         <th>Image</th>
-                                                        <th>Nama Kategori</th>
+                                                        <th>Nama Kategori</th> 
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 @foreach($kategori as $p)
                                                 <tbody class="fs-6">
-                                                    <tr class="text-center text-break">  
-                                                        <td>
-                                                            <img src="{{asset('storage/image/kategori/'.$p->image)}}" alt="img" /> 
-                                                        </td> 
+                                                    <tr class="text-center text-break">
+                                                        <td><img src="{{asset('storage/image/kategori/'.$p->image)}}" class="img-fluid" alt="" /></td>  
                                                         <td>{{ $p->namakategori}}</td>
                                                         <td>
                                                             <div class="btn flex">
@@ -114,22 +112,18 @@
                                                                     <button type="button" class="btn btn-danger">
                                                                         <i class="fa-solid fa-trash-can"></i> 
                                                                     </button> 
-                                                                </a>
-                                                                <a href="{{ route('home.index')}}">
-                                                                    <button type="button" class="btn btn-primary">
-                                                                        <i class="fa-solid fa-eye"></i> 
-                                                                    </button> 
-                                                                </a>
+                                                                </a>       
                                                             </div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                                 @endforeach
                                             </table>
-                                            <div class="pt-3">
+                                            <div class="m-3 float-right">
                                                 {{ $kategori->links() }}
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

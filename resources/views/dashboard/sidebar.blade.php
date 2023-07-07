@@ -14,6 +14,13 @@
               </a>
           </li>
           <li class="nav-item">
+              <a class="nav-link " href="{{ route('datarekening.index') }}">
+                  <!-- <i class="fa-solid fa-shop menu-icon"></i> -->
+                  <i class="fa-solid fa-money-check-dollar menu-icon"></i>
+                  <span class="menu-title">Rekening</span>
+              </a>
+          </li>
+          <li class="nav-item">
               <a class="nav-link " href="{{ route('manajemenorder.index') }}">
                   <i class="fa-solid fa-cart-shopping menu-icon"></i>
                   <span class="menu-title">Order</span>

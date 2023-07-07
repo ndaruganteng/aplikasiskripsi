@@ -18,6 +18,7 @@ use App\http\Controllers\landing\TransaksiController;
 use App\http\Controllers\landing\PesananController;
 use App\http\Controllers\landing\WelcomeController;
 use App\http\Controllers\landing\DetailpesananController;
+use App\http\Controllers\landing\RatingController;
 
 // dashboard admin
 use App\http\Controllers\admin\AdminController;
@@ -25,6 +26,7 @@ use App\http\Controllers\admin\ManajemenTourController;
 use App\http\Controllers\admin\ManajemenuserbiroController;
 use App\http\Controllers\admin\ManajemenusermemberController;
 use App\http\Controllers\admin\KategoriTourController;
+use App\http\Controllers\admin\RiquestmitraController;
 
 // dashboard biro
 use App\http\Controllers\dashboard\DashboardController;
@@ -34,6 +36,7 @@ use App\http\Controllers\dashboard\DetaildatatourController;
 use App\http\Controllers\dashboard\ProfileController;
 use App\http\Controllers\dashboard\EditprofileController;
 use App\http\Controllers\dashboard\DetailorderController;
+use App\http\Controllers\dashboard\DatarekeningController;
 
 
 
@@ -55,13 +58,19 @@ Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi
 Route::get('/detail-tour', [DetailtourController::class, 'index'])->name('detail-tour.index');
 Route::get('/pesanan', [PesananController::class, 'index'])->name('pesanan.index');
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
+Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/detail-pesanan', [DetailpesananController::class, 'index'])->name('detail-pesanan.index');
+
+// search 
+Route::get('/search',[HomeController::class, 'search'])->name('home.search');
+Route::get('/cari',[TourController::class, 'cari'])->name('tour.cari');
 
 //dashboard Admin
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::get('/manajementour', [ManajemenTourController::class, 'index'])->name('manajementour.index');
 Route::get('/manajemenuserbiro', [ManajemenuserbiroController::class, 'index'])->name('manajemenuserbiro.index');
 Route::get('/manajemenusermember', [ManajemenusermemberController::class, 'index'])->name('manajemenusermember.index');
+Route::get('/requestmitra', [RiquestmitraController::class, 'index'])->name('requestmitra.index');
 
 // dashboard biro
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -86,3 +95,14 @@ Route::post('/tambahtour', [DatatourController::class, 'store'])->name('Tour.ind
 Route::get('/datatour/edit/{id}', [DatatourController::class, 'edit'])->name('edittour.index');
 Route::put('/datatour/update/{id}', [DatatourController::class, 'update'])->name('updateTour.index');
 Route::get('/datatour/hapus/{id}', [DatatourController::class, 'hapus'])->name('hapus.index');
+Route::pattern('id', '[0-9]+');
+Route::get('/{id}', [DetailtourController::class,'show']);
+
+
+// data rekening
+Route::get('/datarekening', [DatarekeningController::class, 'index'])->name('datarekening.index');
+Route::get('/tambahrekening', [DatarekeningController::class, 'tambah'])->name('tambahrekening.index');
+Route::post('/tambahrekening', [DatarekeningController::class, 'store'])->name('Rekening.index');
+Route::get('/datarekening/edit/{id}', [DatarekeningController::class, 'edit'])->name('editrekening.index');
+Route::put('/datarekening/update/{id}', [DatarekeningController::class, 'update'])->name('updateRekening.index');
+Route::get('/datarekening/hapus/{id}', [DatarekeningController::class, 'hapus'])->name('hapus.index');

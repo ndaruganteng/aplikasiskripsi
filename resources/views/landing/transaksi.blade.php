@@ -78,34 +78,18 @@
                                 </div>
                             </div>
                             <div class="flex flex-wrap  pb-4 sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                                <div class="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
+                                @foreach($rekening as $item)
+                                    <div class="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
                                     <div class="w-32 h-20 inline-flex items-center justify-center mb-2 flex-shrink-0">
-                                        <img src="images/background/bca.png" alt="">
+                                        <img src="{{asset('storage/image/rekening/'.$item->imagerek)}}" alt="">
                                     </div>
                                     <div class="flex-grow">
-                                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">NO. VIRTUAL ACCOUNT </h2>
-                                        <p class="leading-relaxed text-base">1234567890098</p>
+                                        <h2 class="text-gray-400 text-lg title-font font-medium mb-2">Nomor Rekening</h2>
+                                        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">{{ $item->nomorrekening }} </h2>
+                                        <p class="leading-relaxed text-gray-400 font-medium"> <span class="font-semibold">A/N : </span>   {{ $item->namarekening }}</p>
                                     </div>
-                                </div>
-                                <div class="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
-                                    <div class="w-32 h-20 inline-flex items-center justify-center mb-2 flex-shrink-0">
-                                        <img src="images/background/bni.png" alt="">
                                     </div>
-                                    <div class="flex-grow">
-                                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">NO. VIRTUAL ACCOUNT </h2>
-                                        <p class="leading-relaxed text-base">1234567890098</p>
-                                    </div>
-                                </div>
-                                <div class="p-4 md:w-1/3 mx-auto flex flex-col text-center items-center">
-                                    <div class="w-32 h-20 inline-flex items-center justify-center mb-2 flex-shrink-0">
-                                        <img src="images/background/mandiri.png" alt="">
-                                    </div>
-                                    <div class="flex-grow">
-                                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">NO. VIRTUAL ACCOUNT </h2>
-                                        <p class="leading-relaxed text-base">1234567890098</p>
-                                    </div>
-                                </div>
-
+                                @endforeach 
                             </div> 
                         </div>
                     </div>
