@@ -28,43 +28,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <!-- <div class="card-header">
-                            <h3 class="card-title">Responsive Hover Table</h3>
-                            <div class="card-tools">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                <div class="input-group-append">
-                                <button type="submit" class="btn btn-default">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                                </div>
-                            </div>
-                            </div>
-                        </div> -->
-                        <div class="row m-3">
-                            <div class="col-sm-6">
-                                <div class=" #">
-                                    <div class="container-fluid">
-                                        <form class="d-flex">
-                                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                            <button class="ml-3  btn btn-dark" type="submit">Search</button>
-                                        </form>
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="input-group input-group-md" style="width: 200px;">
+                                    <input type="text" name="table_search" class="form-control float-left" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-secondary">
+                                            <i class="fas fa-search"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="float-sm-right">
+                            <div class="card-tools">
                                     <a href="{{ route('tambahrekening.index') }}">
-                                        <button type="submit" class="btn btn-dark flex" value="Submit">
+                                        <button type="submit" class="btn float-right btn-secondary">
                                             Tambah Rekening
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
                                     </a>
-                                </div>
                             </div>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body table-responsive">
                             <table class="table table-hover dataTable dtr-inline collapsed">
                                 <thead>

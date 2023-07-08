@@ -11,7 +11,7 @@
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row">
             <div class="col-sm-6">
                 <h1 class="m-0">Manajemen Tour</h1>
             </div>
@@ -30,7 +30,19 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                    <h3 class="text-uppercase mx-auto mt-3">Data Tour</h3>
+                        <div class="card-header">
+                            <h3 class="card-title">Data Tour</h3>
+                            <div class="card-tools">
+                                <div class="input-group input-group-sm" style="width: 150px;">
+                                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-secondary">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card-body table-responsive">
                             <table class="table ">
                                 <thead>

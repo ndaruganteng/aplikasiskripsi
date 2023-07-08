@@ -10,7 +10,7 @@
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
-                <div class="row mb-2">
+                <div class="row">
                 <div class="col-sm-6">
                     <h1 class="m-0">Request Mitra</h1>
                 </div>
@@ -29,19 +29,15 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="row m-3">
-                                <div class="col-sm-6">
-                                    <h3 class=""> Data Request Mitra</h3>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="float-sm-right">
-                                        <div class=" #">
-                                            <div class="container-fluid">
-                                                <form class="d-flex">
-                                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                                    <button class="ml-3  btn btn-dark" type="submit">Search</button>
-                                                </form>
-                                            </div>
+                            <div class="card-header">
+                                <h3 class="card-title">Data Request Mitra </h3>
+                                <div class="card-tools">
+                                    <div class="input-group input-group-sm" style="width: 150px;">
+                                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-secondary">
+                                                <i class="fas fa-search"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
