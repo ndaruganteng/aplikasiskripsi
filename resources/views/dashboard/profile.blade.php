@@ -36,12 +36,12 @@
               <h3 class="profile-username text-center">Jamal</h3>
               <p class="text-muted text-center">Biro Wisata</p>
               <ul class="list-group  mb-3">
-                <!-- <li class="list-group-item">
+                <li class="list-group-item">
                   <b>whatsapp</b>
                   <a class="float-right" href="https://wa.me/085647019630" target="blank">
                     <i class="fa-brands fa-whatsapp"></i>
                   </a>
-                </li> -->
+                </li>
                 <li class="list-group-item">
                   <b>Facebook</b> 
                   <a class="float-right" href="https://www.facebook.com/adek.gantengs/" target="blank">
@@ -63,13 +63,13 @@
           <div class="card ">
             <div class="card-header p-2">
               <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active " href="#activity" data-toggle="tab">Profile</a></li>
+                <li class="nav-item"><a class="nav-link active " href="#profile" data-toggle="tab">Profile</a></li>
                 <li class="nav-item"><a class="nav-link " href="#password" data-toggle="tab">Password</a></li>
               </ul>
             </div>
             <div class="card-body">
               <div class="tab-content">
-                <div class="tab-pane active" id="activity">
+                <div class="tab-pane active" id="profile">
                   <!-- Post -->
                   <div class="post">
                     <h4>No Telepon :</h4>

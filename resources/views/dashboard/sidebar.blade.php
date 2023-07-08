@@ -36,12 +36,18 @@
                   </p>
                 </a>
           </li>
-          <li class="nav-item">
-                <a href="{{ route('manajemenorder.index') }}" class="nav-link">          
-                  <i class="nav-icon fa-solid fa-cart-shopping"></i>
-                  <p>
-                    Manajemen Order
-                  </p>
+          <li class="nav-item user-panel">
+              <a href="{{ route('manajemenorder.index') }}" class="nav-link">          
+                <i class="nav-icon fa-solid fa-cart-shopping"></i>
+                <p>
+                  Manajemen Order
+                </p>
+              </a>
+          </li>
+          <li class="nav-item ">
+                <a href="#" class="nav-link">          
+                  <i class=" nav-icon fa-solid fa-right-from-bracket"></i>
+                  <p> Log out </p>
                 </a>
           </li>
         </ul>
