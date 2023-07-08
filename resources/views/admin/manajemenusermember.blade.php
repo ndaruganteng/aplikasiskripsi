@@ -1,163 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Thelema - Dahsboard Admin</title>
-  @include('sweetalert::alert')
-  <link
-            rel="icon"
-            type="image/png"
-            sizes="56x56"
-            href="images/icon/iconbg.png"
-    />
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="{{asset('template')}}/vendors/feather/feather.css">
-  <link rel="stylesheet" href="{{asset('template')}}/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="{{asset('template')}}/vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- trixeditor -->
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
-  <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="{{asset('template')}}/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="{{asset('template')}}/vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="{{asset('template')}}/css/vertical-layout-light/style.css">
-  <!-- endinject -->
- 
-</head>
-<body>
 
-    <div class="container-scroller">
-        @include('admin.header')
-        <div class="container-fluid page-body-wrapper">
-        @include('admin.sidebar')
-        @include('admin.setting')
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="content-header">
-                        <div class="container-fluid">
-                            <div class="row mb-2">
-                                <div class="col-sm-6">
-                                    <h1 class="m-0 fw-blod">Manajemen User </h1>
-                                </div>
-                            <div class="col-sm-6">
-                                <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Manajemen User</li>
-                                </ol>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <section class="content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card ">
-                                    <div class="row m-3">
-                                            <div class="col-sm-6">
-                                                <h3 class="text-uppercase mt-3"> Data Wisatawan</h3>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="float-sm-right">
-                                                    <div class=" #">
-                                                        <div class="container-fluid">
-                                                            <form class="d-flex">
-                                                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                                                <button class="ml-3  btn btn-dark" type="submit">Search</button>
-                                                            </form>
-                                                        </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body table-responsive">
-                                            <table class="table ">
-                                                <thead>
-                                                    <tr class="text-center fs-6">
-                                                        <th>Image</th>
-                                                        <th>Nama</th>
-                                                        <th>Username</th>
-                                                        <th>Email</th>                                
-                                                        <th>No Telepon</th>                                
-                                                        <th>Role</th>                                
-                                                        <th>Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="fs-6">
-                                                    <tr class="text-center text-break">
-                                                        <td>
-                                                            <img
-                                                                src="images/icon/profile.png"
-                                                                alt=""
-                                                                style=""
-                                                            />
-                                                        </td>  
-                                                        <td>Jamal</td>
-                                                        <td>Jamal21</td>
-                                                        <td>Jamal20gmail.com</td>
-                                                        <td>1234567890</td>
-                                                        <td>Wisatawan</td>                                             
-                                                        <td>
-                                                            <div>
-                                                                <a href="#">
-                                                                    <button type="button" class="btn btn-warning">
-                                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                                    </button>
-                                                                </a>
-                                                                <a href="#">
-                                                                    <button type="button" class="btn btn-danger">
-                                                                        <i class="fa-solid fa-trash"></i>
-                                                                    </button>
-                                                                </a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>        
-                @include('admin.footer')
+@include('admin.header')
+
+@include('admin.navbar')
+
+@include('admin.sidebar')
+
+<div class="content-wrapper" style="min-height: 2080.4px;">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 fw-blod">Manajemen User </h1>
+                </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Manajemen User</li>
+                </ol>
             </div>
-
+            </div>
         </div>
     </div>
-  <!-- container-scroller -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card ">
+                        <div class="row m-3">
+                                <div class="col-sm-6">
+                                    <h3 class=""> Data Wisatawan</h3>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="float-sm-right">
+                                        <div class=" #">
+                                            <div class="container-fluid">
+                                                <form class="d-flex">
+                                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                                    <button class="ml-3  btn btn-dark" type="submit">Search</button>
+                                                </form>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="table ">
+                                <thead>
+                                    <tr class="text-center fs-6">
+                                        <th>Image</th>
+                                        <th>Nama</th>
+                                        <th>Username</th>
+                                        <th>Email</th>                                
+                                        <th>No Telepon</th>                                
+                                        <th>Role</th>                                
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="fs-6">
+                                    <tr class="text-center text-break">
+                                        <td>
+                                            <img src="images/icon/profile.png"  style="width:50px" />
+                                        </td>  
+                                        <td>Jamal</td>
+                                        <td>Jamal21</td>
+                                        <td>Jamal20gmail.com</td>
+                                        <td>1234567890</td>
+                                        <td>Wisatawan</td>                                             
+                                        <td>
+                                            <div>
+                                                <a href="#">
+                                                    <button type="button" class="btn btn-warning">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                    </button>
+                                                </a>
+                                                <a href="#">
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>        
 
-  <!-- plugins:js -->
-  <script src="{{asset('template')}}/vendors/js/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <script src="{{asset('template')}}/vendors/chart.js/Chart.min.js"></script>
-  <script src="{{asset('template')}}/vendors/datatables.net/jquery.dataTables.js"></script>
-  <script src="{{asset('template')}}/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-  <script src="{{asset('template')}}/js/dataTables.select.min.js"></script>
-
-  <!-- End plugin js for this page -->
-  <!-- inject:js -->
-  <script src="{{asset('template')}}/js/off-canvas.js"></script>
-  <script src="{{asset('template')}}/js/hoverable-collapse.js"></script>
-  <script src="{{asset('template')}}/js/template.js"></script>
-  <script src="{{asset('template')}}/js/settings.js"></script>
-  <script src="{{asset('template')}}/js/todolist.js"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="{{asset('template')}}/js/dashboard.js"></script>
-  <script src="{{asset('template')}}/js/Chart.roundedBarCharts.js"></script>
-  <!-- End custom js for this page-->
-</body>
-
-</html>
-
+@include('admin.footer')

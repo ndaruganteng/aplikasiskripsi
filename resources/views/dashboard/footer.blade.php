@@ -1,12 +1,10 @@
-<!-- <footer class="footer">
-    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-      <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright THelama © 2023</span>
-    </div>
-</footer> -->
+  <!-- footer -->
+  <footer class="main-footer text-center ">
+    <strong>THELEMA </strong>
+  </footer>
+  <!-- Akhir footer -->
 
-<footer class="footer">
-    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-      <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
-      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted &amp; made with <i class="ti-heart text-danger ml-1"></i></span>
-    </div>
-</footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+  <!-- akhir control sidebar -->

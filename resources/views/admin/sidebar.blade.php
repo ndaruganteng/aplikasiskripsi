@@ -1,44 +1,85 @@
-      <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-            <!-- <li class="nav-header"> BIRO WISATA</li> -->
+  <!-- Main Sidebar  -->
+
+
+  <aside class="main-sidebar sidebar-dark-primary  ">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="/images/icon/iconbg.png" alt=" Logo" class="brand-image img-circle">
+      <span class="brand-text fw-bold font-weight-light">THELEMA</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="/images/icon/profile.png" class="img-circle " alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Admin</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <!-- <li class="nav-header">Navigasi</li> -->
           <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.index') }}">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard Admin</span>
-              </a>
+                <a href="{{ route('admin.index') }}" class="nav-link ">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Dashboard</p>
+                </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link " href="{{ route('manajementour.index') }}">
-                  <i class="fa-solid fa-shop menu-icon"></i>
-                  <span class="menu-title">Manajemen Tour</span>
-              </a>
+                <a href="{{ route('manajementour.index') }}" class="nav-link">          
+                <i class="nav-icon fa-solid fa-shop"></i>
+                  <p>
+                    Manajemen Tour
+                  </p>
+                </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="fa-solid fa-users-gear menu-icon"></i>
-              <span class="menu-title">Manajemen User</span>
-              <i class="menu-arrow"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-users-gear"></i>
+              <p>
+              Manajemen User
+                <i class="right fas fa-angle-left"></i>
+              </p>
             </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{ route('manajemenusermember.index') }}">User</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{ route('manajemenuserbiro.index') }}">Biro Wisata</a></li>
-              </ul>
-            </div>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('manajemenusermember.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>member</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('manajemenuserbiro.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Biro wisata</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
-              <a class="nav-link " href="{{ route('kategoritour.index') }}">
-                  <i class="fa-solid fa-list menu-icon"></i>
-                  <span class="menu-title">Kategori Tour</span>
-              </a>
+                <a href="{{ route('kategoritour.index') }}" class="nav-link">          
+                  <i class="nav-icon fa-solid fa-list"></i>
+                  <p>
+                    Kategori Tour
+                  </p>
+                </a>
           </li>
           <li class="nav-item">
-              <a class="nav-link " href="{{ route('requestmitra.index') }}">
-                  <i class="fa-sharp fa-solid fa-bookmark menu-icon"></i>
-                  <span class="menu-title">Request Mitra</span>
-              </a>
+                <a href="{{ route('requestmitra.index') }}" class="nav-link">          
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Request Mitra
+                  </p>
+                </a>
           </li>
         </ul>
       </nav>
-      <!-- partial -->
+    </div>
+  </aside>
