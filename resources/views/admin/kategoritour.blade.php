@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
                     <li class="breadcrumb-item active">Kategori Tour</li>
                     </ol>
                 </div>
@@ -48,8 +48,8 @@
                                     </a>
                             </div>
                         </div>
-                        <div class="card-body table-responsive  ">
-                            <table class="table table-borderd table-hover dataTable dtr-inline collapsed">
+                        <div class="card-body table-responsive">
+                            <table class="table table-hover dataTable dtr-inline collapsed">
                                 <thead>
                                     <tr class="text-center">
                                         <th>Image</th>

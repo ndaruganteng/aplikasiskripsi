@@ -10,7 +10,7 @@
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row mb-3">
+            <div class="row">
                 <div class="col-sm-6">
                     <h1 class="m-0 ">Tambah Data Kategori</h1>
                 </div>
@@ -26,7 +26,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 mx-auto">
-                    <div class="card ">
+                    <div class="card card-secondary">
                         <div class="card-header">
                             <h3 class="m-0 text-center ">Input Data Kategori</h3>
                         </div>

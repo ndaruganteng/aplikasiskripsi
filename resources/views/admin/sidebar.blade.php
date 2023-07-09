@@ -1,5 +1,3 @@
-  <!-- Main Sidebar  -->
-
 
   <aside class="main-sidebar sidebar-dark-primary  ">
     <!-- Brand Logo -->
@@ -76,7 +74,13 @@
                   </p>
                 </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item user-panel">
+                <a href="{{ route('home.index') }}" class="nav-link">          
+                  <i class=" nav-icon fa-solid fa-arrow-left"></i>
+                  <p>back</p>
+                </a>
+          </li>
+          <li class="nav-item user-panel">
                 <a href="{{ route('requestmitra.index') }}" class="nav-link">          
                   <i class=" nav-icon fa-solid fa-right-from-bracket"></i>
                   <p> Log out </p>

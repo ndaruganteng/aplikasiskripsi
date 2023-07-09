@@ -26,35 +26,35 @@
         <div class="card card-solid">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-12 col-sm-6">
-                        <div class="col-12 pt-3">
+                    <div class="col-12 col-sm-6 pt-3">
+                        <div class="col-12 ">
                             <img src="images/background/paket.jpg" class="product-image" alt="Product Image">
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <h2 class="my-3">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h2>
-                        <div>
-                            <h4 class="#">Nama Biro :</h4>
+                        <h3 class="my-3">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h3>
+                        <div class="flex">
+                            <h5 class="#">Nama Biro :</h5>
                             <p>Jamal Tour</p>
                         </div> 
-                        <div>
-                            <h4 class="#">Harga :</h4>
+                        <div c>
+                            <h5 class="#">Harga :</h5>
                             <p>Rp 1.000.000</p>
                         </div> 
                         <div>
-                            <h4 class="#">Highlight :</h4>
+                            <h5 class="#">Highlight :</h5>
                             <p>  Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
                         </div>
                         <div>
-                            <h4 class="#">Kuota :</h4>
+                            <h5 class="#">Kuota :</h5>
                             <p>40 Orang </p>
                         </div>  
                         <div>
-                            <h4 class="#">Tanggal Berangkat :</h4>
+                            <h5 class="#">Tanggal Berangkat :</h5>
                             <p> 20 Juli 2023</p>
                         </div>  
                         <div>
-                            <h4 class="#">Tanggal Berakhir :</h4>
+                            <h5 class="#">Tanggal Berakhir :</h5>
                             <p> 20 Juli 2023</p>
                         </div>  
                         <hr>

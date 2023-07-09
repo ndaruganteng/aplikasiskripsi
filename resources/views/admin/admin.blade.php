@@ -6,5 +6,4 @@
 
 @include('admin.master')
 
-
 @include('admin.footer')

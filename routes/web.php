@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\auth\LoginController;
 use App\http\Controllers\auth\RegisterController;
 
+// user
+use App\http\Controllers\user\UserController;
+use App\http\Controllers\user\EdituserprofileController;
+use App\http\Controllers\user\UserprofileController;
+
 // landing
 use App\http\Controllers\landing\HomeController;
 use App\http\Controllers\landing\TourController;
@@ -64,6 +69,11 @@ Route::get('/detail-pesanan', [DetailpesananController::class, 'index'])->name('
 // search 
 Route::get('/search',[HomeController::class, 'search'])->name('home.search');
 Route::get('/cari',[TourController::class, 'cari'])->name('tour.cari');
+
+// dashboard User
+Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::get('/userprofile', [UserprofileController::class, 'index'])->name('userprofile.index');
+Route::get('/edituserprofile', [EdituserprofileController::class, 'index'])->name('edituserprofile.index');
 
 //dashboard Admin
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');

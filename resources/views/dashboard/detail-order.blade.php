@@ -26,13 +26,13 @@
         <div class="card card-solid">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-12 col-sm-6">
-                        <div class="col-12 pt-4">
+                    <div class="col-12 col-sm-6 pt-3">
+                        <div class="col-12 ">
                             <img src="images/background/paket.jpg" class="product-image" alt="Product Image">
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <h4 class="my-3">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h4>
+                        <h3 class="my-3">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h3>
                         <div>
                             <h5 class="#">Kode Booking:</h5>
                             <p>1234567890</p>
