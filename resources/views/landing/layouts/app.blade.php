@@ -20,6 +20,7 @@
 <body>
     <nav class="bg-white shadow">
         @include('landing.layouts.includes.navbar')
+        
     </nav>
 
     <main>@yield('content')</main>

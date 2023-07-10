@@ -81,7 +81,7 @@
                 </a>
           </li>
           <li class="nav-item user-panel">
-                <a href="{{ route('requestmitra.index') }}" class="nav-link">          
+                <a href="/logout" class="nav-link">          
                   <i class=" nav-icon fa-solid fa-right-from-bracket"></i>
                   <p> Log out </p>
                 </a>

@@ -71,7 +71,6 @@
                                 </div>
                             </a>
                             <div class="p-5">
-                                 <!-- <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold  px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ $item->kategori }}</span> -->
                                 <div class="flex items-center justify-between mb-2">
                                     <p class="tracking-widest text-sm title-font font-semibold italic text-gray-400 mb-1">24-05-2023</p>
                                     <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ $item->kategori }}</span>
@@ -97,12 +96,8 @@
                     </div>
                 @endforeach           
                 </div>
-        </div>
+            </div>
     </section>
-
-    
- 
-
 </body>
 </html>
 @endsection

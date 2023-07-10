@@ -54,15 +54,17 @@
                                     </tr>
                                 </thead>
                                 <tbody class="fs-6">
+                                    @foreach($users as $p)
                                     <tr class="text-center text-break">
                                         <td>
-                                            <img src="images/icon/profile.png"  style="width:50px" />
+                                            <img src="{{asset('storage/image/user/'.$p->image)}}"  style="width:50px" />
                                         </td>  
-                                        <td>Jamal</td>
-                                        <td>Jamal21</td>
-                                        <td>Jamal20gmail.com</td>
-                                        <td>1234567890</td>
-                                        <td>Wisatawan</td>                                             
+                                        <td>{{$p->nama}}</td>
+                                        <td>{{$p->username}}</td>
+                                        <td>{{$p->email}}</td>
+                                        <td>{{$p->no_hp}}</td>  
+                                        <td>{{$p->role}}</td>
+                                           
                                         <td>
                                             <div>
                                                 <a href="#">
@@ -78,6 +80,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

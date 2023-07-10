@@ -116,3 +116,18 @@ Route::post('/tambahrekening', [DatarekeningController::class, 'store'])->name('
 Route::get('/datarekening/edit/{id}', [DatarekeningController::class, 'edit'])->name('editrekening.index');
 Route::put('/datarekening/update/{id}', [DatarekeningController::class, 'update'])->name('updateRekening.index');
 Route::get('/datarekening/hapus/{id}', [DatarekeningController::class, 'hapus'])->name('hapus.index');
+
+
+//Login
+
+Route::group(['middleware' => ['guest']], function(){
+    Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+    Route::post('/login', [LoginController::class, 'login'])->name('login.store');
+    Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
+    Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+    
+
+
+   
+});
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

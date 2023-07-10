@@ -16,56 +16,6 @@
           
     </head>
     <body class="bg-gray-100">
-
-        <!-- <section class="text-gray-600 body-font">
-            <div class="container px-40 pt-16 pb-4 mx-auto">
-                <div class="">
-                    <h1 class="sm:text-3xl lg:text-3xl font-semibold title-font text-gray-900 mb-4">Pembayaran</h1>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="text-gray-600 body-font">
-            <div class="container px-24 py-24 mx-auto">
-                <div class="text-center mb-10">
-                    <h1 class="sm:text-3xl text-2xl font-bold title-font text-gray-900 mb-4">METODE PEMBAYARAN</h1>
-                    <div class="flex mt-6 justify-center">
-                        <div class="w-28 h-1 rounded-full bg-yellow-600 inline-flex"></div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div class="w-32 h-20 inline-flex items-center justify-center mb-2 flex-shrink-0">
-                            <img src="images/background/bca.png" alt="">
-                        </div>
-                        <div class="flex-grow">
-                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">NO. VIRTUAL ACCOUNT </h2>
-                            <p class="leading-relaxed text-base">1234567890098</p>
-                        </div>
-                    </div>
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div class="w-32 h-20 inline-flex items-center justify-center mb-2 flex-shrink-0">
-                            <img src="images/background/bni.png" alt="">
-                        </div>
-                        <div class="flex-grow">
-                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">NO. VIRTUAL ACCOUNT </h2>
-                            <p class="leading-relaxed text-base">1234567890098</p>
-                        </div>
-                    </div>
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div class="w-32 h-20 inline-flex items-center justify-center mb-2 flex-shrink-0">
-                            <img src="images/background/mandiri.png" alt="">
-                        </div>
-                        <div class="flex-grow">
-                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">NO. VIRTUAL ACCOUNT </h2>
-                            <p class="leading-relaxed text-base">1234567890098</p>
-                        </div>
-                    </div>
-
-                </div>  
-            </div>
-        </section> -->
-
         <section class="text-gray-600 body-font">
             <div class="container px-40  py-14 mx-auto">
                 <div class="flex flex-wrap -m-4">
@@ -133,17 +83,12 @@
                                     <div class="px-4 py-2.5 ml-6 w-full text-sm text-center text-yellow-500 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
                                         <span class="font-medium ">Nominal yang Harus Anda bayar : </span> IDR 8.800.000
                                     </div>
-  
                                 </div>  
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
     </body>
 </html>
 @endsection

@@ -35,43 +35,6 @@
         </section>
         <!-- hero -->
 
-        <!-- kategorii -->
-        <!-- <section class="text-gray-600 body-font">
-            <div class="container px-24 py-24 mx-auto">
-                <div class="flex flex-col text-center w-full mb-6">
-                    <h1 class="text-3xl font-semibold title-font mb-4 text-gray-900">KATEGORI TOUR</h1>
-                </div>
-                <div class="flex flex-wrap -m-4">
-                    <div class="p-4 lg:w-1/3 md:w-1/2">
-                        <div class="h-full flex flex-col items-center text-center">
-                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="images/home/guci.jpg">
-                            <div class="w-full">
-                                <h1 class="title-font font-medium text-xl text-gray-900">Wisata Alam</h1>     
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 lg:w-1/3 md:w-1/2">
-                        <div class="h-full flex flex-col items-center text-center">
-                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="images/home/guci.jpg">
-                            <div class="w-full">
-                                <h1 class="title-font font-medium text-xl text-gray-900">Wisata Alam</h1>     
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 lg:w-1/3 md:w-1/2">
-                        <div class="h-full flex flex-col items-center text-center">
-                            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="images/home/guci.jpg">
-                            <div class="w-full">
-                                <h1 class="title-font font-medium text-xl text-gray-900">Wisata Alam</h1>     
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-        <!-- end kategorii -->
-
         <!-- kategori -->
         <section class="text-gray-600 font-inter">
             <div class="container px-24 pt-10 mx-auto ">
@@ -168,34 +131,6 @@
             </div>
         </section>
         <!-- end card -->
-
-        <!-- rangetanggal -->
-        <!-- <div class="px-40 pt-4 flex w-full justify-center items-end">
-            <div class="  w-full lg:w-1/3 px-4 py-2">
-                <div class="relative w-full mb-3  rounded-lg">
-                    <label for="tanggal_kembali"
-                        class="block uppercase text-blueGray-600 text-xs font-semibold mb-2">tanggal 
-                        Berangkat</label>
-                    <input type="date" id="tanggal_kembali" name="tanggal_kembali"
-                        min="<?= date('Y-m-d') ?>"
-                        class="border px-3 py-3  text-blueGray-600 border-gray-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-15"
-                        placeholder="Tanggal Kembali" onchange="hitungTotalHarga()" required>
-                </div>
-            </div>
-            <div class=" w-full lg:w-1/3 px-4 py-2">
-                <div class="w-full mb-3 rounded-lg">
-                    <label for="tanggal_kembali"
-                        class="block uppercase text-blueGray-600 text-xs font-semibold mb-2">
-                        Tanggal Berakhir</label>
-                    <input type="date" id="tanggal_kembali" name="tanggal_kembali"
-                        min="<?= date('Y-m-d') ?>"
-                        class="border  px-3 py-3  text-gray-900 border-gray-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-15"
-                        placeholder="Tanggal Kembali" onchange="hitungTotalHarga()" required>
-                </div>
-            </div>                  
-        </div>  -->
-        <!-- end -->
-
     </body>
 </html>
 @endsection

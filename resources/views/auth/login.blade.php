@@ -35,35 +35,7 @@
     </style>
 
   </head>
-  <!-- <body>
-      <div class="h-screen flex mx-40">
-          <div class="flex w-1/2 bg-white justify-around items-center ">
-            <div>
-              <img src="images/home/background.png" alt="bglogin" />
-            </div>
-          </div>
-          <div class="flex w-1/2 justify-center items-center bg-white  ">
-            <form class="bg-white">
-              <h1 class="text-gray-800 font-bold text-center text-3xl mb-6">Welcome to Thelema</h1>
-              <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                </svg>
-                <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Username" />
-              </div>
-              <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-                </svg>
-                <input class="pl-2 outline-none border-none" type="text" name="" id="" placeholder="Password" />
-              </div>
-              <button type="submit" class="block w-full bg-black mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
-              <span class="mt-12 flex text-gray-400">Dont have an account ? <a href="{{ route('register.index') }}" class="hover:text-yellow-400">Sign up</a></span>
-              
-            </form>
-          </div>
-      </div>
-  </body> -->
+
 
 <body class="bg-white">
   <!-- Example -->
@@ -87,39 +59,47 @@
       <p class="font-medium">© 2022 Company</p>
     </div>
     <!-- Login -->
-    <div class="flex flex-1 flex-col items-center justify-center px-10 relative">
-      <div class="flex lg:hidden justify-between items-center w-full py-4">
-        <div class="flex items-center justify-start space-x-3">
-          <span class="bg-black rounded-full w-6 h-6"></span>
-          <a href="#" class="font-medium text-lg">Brand</a>
-        </div>
-        <div class="flex items-center space-x-2">
-          <span>Not a member? </span>
-          <a href="{{ route('register.index') }}" class="underline font-medium text-yellow-500">
-            Sign up now
-          </a>
-        </div>
-      </div>
-      <!-- Login box -->
-      <div class="flex flex-1 flex-col  justify-center space-y-5 max-w-md">
-        <div class="flex flex-col space-y-2 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Sign in to account</h2>
-          <p class="text-md md:text-xl">Sign up or log in to place the order,no password require!</p>
-        </div>
-        <div class="flex flex-col max-w-md space-y-5">
-          <input type="text" placeholder="Username" class="flex px-3 py-2 md:px-4 md:py-3 border-2 border-black rounded-lg font-medium placeholder:font-normal" />
-          <input type="text" placeholder="Password" class="flex px-3 py-2 md:px-4 md:py-3 border-2 border-black rounded-lg font-medium placeholder:font-normal" />
-          <button class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
-            Sign in
-          </button>
-          <div class="flex justify-center items-center">
-            <span class="w-full border border-black"></span>
-            <span class="px-4">Or</span>
-            <span class="w-full border border-black"></span>
+
+      <div class="flex flex-1 flex-col items-center justify-center px-10 relative">
+        <div class="flex lg:hidden justify-between items-center w-full py-4">
+          <div class="flex items-center justify-start space-x-3">
+            <span class="bg-black rounded-full w-6 h-6"></span>
+            <a href="#" class="font-medium text-lg">Brand</a>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span>Not a member? </span>
+            <a href="{{ route('register.index') }}" class="underline font-medium text-yellow-500">
+              Sign up now
+            </a>
           </div>
         </div>
+
+        <!-- Login box -->
+        <div class="flex flex-1 flex-col  justify-center space-y-5 max-w-md">
+          <div class="flex flex-col space-y-2 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold">Sign in to account</h2>
+            <p class="text-md md:text-xl">Sign up or log in to place the order,no password require!</p>
+          </div>
+          <form action="{{route('login.store')}}" method="post">
+           @csrf
+          <div class="flex flex-col max-w-md space-y-5">
+            <input type="email" name="email" placeholder="Email" class="flex px-3 py-2 md:px-4 md:py-3 border-2 border-black rounded-lg font-medium placeholder:font-normal" />
+            <input type="password"   name="password" placeholder="Password" class="flex px-3 py-2 md:px-4 md:py-3 border-2 border-black rounded-lg font-medium placeholder:font-normal" />
+            <button type="submit" class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
+              Sign in
+            </button>
+            <div class="flex justify-center items-center">
+              <span class="w-full border border-black"></span>
+              <span class="px-4">Or</span>
+              <span class="w-full border border-black"></span>
+            </div>
+          </div>
+          </form>
+        </div>
+
       </div>
-    </div>
+    
+
   </div>
   </div>
 </body>

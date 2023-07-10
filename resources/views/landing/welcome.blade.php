@@ -66,12 +66,12 @@
         <!-- hero -->
 
 
-        <!-- <section class="text-gray-600 body-font">
+        <section class="text-gray-600 body-font">
             <div class="container px-24 pt-10 mx-auto ">
                 <div class="flex flex-wrap -m-2 ">
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full   ">
                         <div class="h-full flex items-center  border-gray-200 border-2 p-4 rounded-lg">
-                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="images/background/bromo.jpg">
+                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="images/background/alam.jpg">
                             <div class="flex-grow">
                                 <a href="#" class="text-gray-900 title-font font-medium">Wisata Alam</a>
                             </div>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                         <div class="h-full flex items-center border-gray-200 border-2 p-4 rounded-lg">
-                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="images/background/borobudur.jpg">
+                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="images/background/sejarah.jpg">
                             <div class="flex-grow">
                                 <a href="" class="text-gray-900 title-font font-medium">Wisata Sejarah</a>
                             </div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                         <div class="h-full flex items-center border-gray-200 border-2 p-4 rounded-lg">
-                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="images/background/demak.jpg">
+                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="images/background/religi.jpg">
                             <div class="flex-grow">
                                 <a href="" class="text-gray-900 title-font font-medium">Wisata Religi</a>
                             </div>
@@ -95,10 +95,10 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- Card -->
-        <!-- <section class="font-inter" >
+        <section class="font-inter" >
             <div class="container px-24 py-24 mx-auto">
                 <div class="flex flex-wrap w-full mb-10 ">
                     <div class="container mx-auto flex flex-col px-5 ustify-center items-center">
@@ -121,7 +121,7 @@
                                     </div>
                                     
                                     <a href="{{ route('detail-tour.index') }}">
-                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h5>
+                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Labuan Bajo</h5>
                                     </a>
                                     <p class="flex items-center text-gray-600 mb-2">
                                         <span class="w-4 h-4 mr-2 inline-flex items-center justify-center text-black  flex-shrink-0">
@@ -140,7 +140,7 @@
                             <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                                 <a href="{{ route('detail-tour.index') }}">
                                     <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                                        <img class=" rounded w-full object-cover hover:scale-110 transition duration-300 ease-in-out  object-center  " src="images/background/paket.jpg" alt="content">
+                                        <img class=" rounded w-full object-cover hover:scale-110 transition duration-300 ease-in-out  object-center  " src="images/home/bali.jpg" alt="content">
                                     </div>
                                 </a>
                                 <div class="p-5">
@@ -150,7 +150,7 @@
                                     </div>
                                     
                                     <a href="{{ route('detail-tour.index') }}">
-                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h5>
+                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Bali</h5>
                                     </a>
                                     <p class="flex items-center text-gray-600 mb-2">
                                         <span class="w-4 h-4 mr-2 inline-flex items-center justify-center text-black  flex-shrink-0">
@@ -160,7 +160,36 @@
                                     <p class="mb-2 font-normal text-gray-400 dark:text-gray-400">Start From</p>
                                     <div class="flex items-center justify-between">
                                         <span class="text-lg font-bold text-yellow-500 ">IDR 8.250.000</span>
-                                        <span class="text-base font-medium text-gray\ ">*Raja holiday</span>                                      
+                                        <span class="text-base font-medium text-gray\ ">*Amal tour</span>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-1/4 md:w-1/2 sm:w-1/1 p-4 mx-auto">                           
+                            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                                <a href="{{ route('detail-tour.index') }}">
+                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                                        <img class=" rounded w-full object-cover hover:scale-110 transition duration-300 ease-in-out  object-center  " src="images/home/lombok.jpg" alt="content">
+                                    </div>
+                                </a>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between">
+                                        <h2 class="tracking-widest text-md title-font font-medium italic text-gray-400 mb-1">24-05-2023</h2>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Wisata Alam</span>
+                                    </div>
+                                    
+                                    <a href="{{ route('detail-tour.index') }}">
+                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Lombok 2.0</h5>
+                                    </a>
+                                    <p class="flex items-center text-gray-600 mb-2">
+                                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center text-black  flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95ZM11 6V4h2v2Zm7 7v-2h2v2Zm-7 7v-2h2v2Zm-7-7v-2h2v2Zm8 9q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"/></svg>
+                                        </span>4 Hari - 3 Malam
+                                    </p>
+                                    <p class="mb-2 font-normal text-gray-400 dark:text-gray-400">Start From</p>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-lg font-bold text-yellow-500 ">IDR 8.250.000</span>
+                                        <span class="text-base font-medium text-gray\ ">*Ojan holiday</span>                                      
                                     </div>
                                 </div>
                             </div>
@@ -175,44 +204,18 @@
                                 <div class="p-5">
                                     <div class="flex items-center justify-between">
                                         <h2 class="tracking-widest text-md title-font font-medium italic text-gray-400 mb-1">24-05-2023</h2>
-                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Wisata Alam</span>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Wisata Keluarga</span>
                                     </div>
                                     
                                     <a href="{{ route('detail-tour.index') }}">
-                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h5>
+                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Yogyakarta</h5>
                                     </a>
                                     <p class="flex items-center text-gray-600 mb-2">
                                         <span class="w-4 h-4 mr-2 inline-flex items-center justify-center text-black  flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95ZM11 6V4h2v2Zm7 7v-2h2v2Zm-7 7v-2h2v2Zm-7-7v-2h2v2Zm8 9q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"/></svg>
-                                        </span>4 Hari - 3 Malam
-                                    </p>
-                                    <p class="mb-2 font-normal text-gray-400 dark:text-gray-400">Start From</p>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-lg font-bold text-yellow-500 ">IDR 8.250.000</span>
-                                        <span class="text-base font-medium text-gray\ ">*Raja holiday</span>                                      
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="xl:w-1/4 md:w-1/2 sm:w-1/1 p-4 mx-auto">                           
-                            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                                <a href="{{ route('detail-tour.index') }}">
-                                    <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                                        <img class=" rounded w-full object-cover hover:scale-110 transition duration-300 ease-in-out  object-center  " src="images/background/paket.jpg" alt="content">
-                                    </div>
-                                </a>
-                                <div class="p-5">
-                                    <div class="flex items-center justify-between">
-                                        <h2 class="tracking-widest text-md title-font font-medium italic text-gray-400 mb-1">24-05-2023</h2>
-                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Wisata Alam</span>
-                                    </div>
-                                    
-                                    <a href="{{ route('detail-tour.index') }}">
-                                        <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">Open Trip Tour Wisata Beautiful of Labuan Bajo - 4D3N</h5>
-                                    </a>
-                                    <p class="flex items-center text-gray-600 mb-2">
-                                        <span class="w-4 h-4 mr-2 inline-flex items-center justify-center text-black  flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95ZM11 6V4h2v2Zm7 7v-2h2v2Zm-7 7v-2h2v2Zm-7-7v-2h2v2Zm8 9q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M14.55 16.55L11 13V8h2v4.175l2.95 2.95ZM11 6V4h2v2Zm7 7v-2h2v2Zm-7 7v-2h2v2Zm-7-7v-2h2v2Zm8 9q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 
+                                            14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 
+                                            3.175-2.138Q9.925 2 12 
+                                            2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4Q8.65 4 6.325 6.325Q4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z"/></svg>
                                         </span>4 Hari - 3 Malam
                                     </p>
                                     <p class="mb-2 font-normal text-gray-400 dark:text-gray-400">Start From</p>
@@ -227,7 +230,7 @@
                     <a href ="#" class="flex mx-auto mt-12 text-white bg-yellow-500  py-2 px-8 focus:outline-none hover:text-white hover:bg-gray-900 rounded-lg text-lg">Jelajah Lainnya</a>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- Card -->
 
         <!-- footer -->
@@ -245,7 +248,7 @@
                         <a href="{{ route('tour.index') }}" class="mr-4 hover:underline md:mr-6">Tour</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact.index') }}"  class="hover:underline">Contact</a>
+                        <a href="{{ route('mitra.index') }}"  class="hover:underline">daftarmitra</a>
                     </li>
                 </ul>
             </div>
