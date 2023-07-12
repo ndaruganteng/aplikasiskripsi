@@ -52,8 +52,7 @@
                 <div class="flex flex-wrap -m-4">
                     <div class="p-4 w-full mx-auto ">
                         <div class=" bg-white p-4 rounded-lg">
-                            <h1 class="text-3xl font-semibold text-center">Data Pemesan </h1> 
-                            
+                            <h1 class="text-3xl font-semibold text-center">Data Pemesan </h1>    
                             <form class="p-4">
                                 <div class="mb-6">
                                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Lengkap</label>

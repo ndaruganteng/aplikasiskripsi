@@ -38,8 +38,23 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('AdminLTE')}}/plugins/summernote/summernote-bs4.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+
+<body class="sidebar-mini layout-fixed sidebar-open" style="height: auto">
+
+
+    <div>
+        @include('dashboard.layouts.includes.navbar')
+
+        <div class="wrapper">
+
+            @include('dashboard.layouts.includes.side')
+            @yield('content')
+
+        </div>
+
+        @include('dashboard.layouts.includes.footer')
+    </div>
+
 
 
 <!-- jQuery -->

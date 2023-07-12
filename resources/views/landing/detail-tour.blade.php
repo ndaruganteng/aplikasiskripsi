@@ -14,6 +14,8 @@
             sizes="56x56"
             href="images/icon/iconbg.png"
         />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/datepicker.min.js"></script>
 </head>
   <body class="bg-gray-100">
 
@@ -46,15 +48,8 @@
               </span>
             </div>  
             <p class="leading-relaxed mt-4 mb-2 text-lg"> <span class="font-bold text-base">Highlight </span> : {{ $detail_tour->highlight }}</p>
-            <p class="leading-relaxed mb-2 text-lg"> <span class="font-bold text-base">Kuota </span> : {{ $detail_tour->kuota }} </p>
-            <p class="leading-relaxed  mb-2 text-lg"> <span class="font-bold text-base">Tanggal Berangkat </span> : {{ $detail_tour->tanggalberangkat }} </p>
-            <p class="leading-relaxed  mb-2 text-lg"> <span class="font-bold text-base">Tanggal Berakhir </span> : {{ $detail_tour->tanggalberakhir }} </p>
+            <p class="leading-relaxed mb-2 text-lg"> <span class="font-bold text-base">Durasi </span> : {{ $detail_tour->durasi }} </p>
             <p class="text-2xl my-4 font-bold text-yellow-600 ">Rp {{ $detail_tour->harga }}</p>
-            <div class="relative my-4">
-              <input type="number" id="visitors" placeholder="jumlah orang" class="bg-white border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 
-              focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
-               dark:focus:border-blue-500" placeholder="" required>
-            </div>           
             <div class="flex mt-5">
               <a href="{{ route('cart.index') }}" class="text-white bg-black border-0 py-2 px-8 focus:outline-none rounded text-lg">Pesan sekarang</a>
             </div>
@@ -99,56 +94,44 @@
       <div class="container px-40 pb-16 mx-auto">
         <div class="flex flex-wrap -m-4">
           <div class="p-4 w-full mx-auto ">
-            <div class=" bg-white p-8 rounded">
-              <h1 class="text-3xl pb-8 font-semibold">Penilaian </h1>
-              <div class="-my-8 divide-y-2 divide-gray-100">
-                <div class="py-8 flex flex-wrap md:flex-nowrap">
-                  <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <span class="font-semibold title-font text-gray-700">Namaku jamal</span>
-                    <span class="mt-1 text-gray-500 text-sm">12 Jun 2023</span>
-                  </div>
-                  <div class="md:flex-grow">
-                    <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. 
-                      Marfa 3 wolf moon party messenger bag selfies, 
-                      poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                  </div>
-                </div>
-                <div class="py-8 flex flex-wrap md:flex-nowrap">
-                  <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <span class="font-semibold title-font text-gray-700">Namaku jamal</span>
-                    <span class="mt-1 text-gray-500 text-sm">12 Jun 2023</span>
-                  </div>
-                  <div class="md:flex-grow">
-                    <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up 
-                      snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual 
-                      pork belly polaroid hoodie portland craft beer.</p>
-                  </div>
-                </div>
-                <div class="py-8 flex flex-wrap md:flex-nowrap">
-                  <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <span class="font-semibold title-font text-gray-700">Namaku jamal</span>
-                    <span class="mt-1 text-gray-500 text-sm">12 Jun 2023</span>
-                  </div>
-                  <div class="md:flex-grow">
-                    <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel 
-                      vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, 
-                      poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                  </div>
-                </div>
-                <div class="py-8 flex flex-wrap md:flex-nowrap">
-                  <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                    <span class="font-semibold title-font text-gray-700">Namaku jamal</span>
-                    <span class="mt-1 text-gray-500 text-sm">12 Jun 2023</span>
-                  </div>
-                  <div class="md:flex-grow">
-                    <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist 
-                      pop-up snackwave ramps cornhole.
-                       Marfa 3 wolf moon party messenger bag selfies, 
-                       poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                  </div>
-                </div>
-
-              </div>
+          <div class=" bg-white p-4 rounded-lg">
+                <h1 class="text-3xl mb-4 font-semibold text-center">Data Pemesan </h1>    
+                <form class="p-4" action="/boking" method="post" enctype="multipart/form-data">
+                  @csrf
+                    <div class="flex items-center justify-between mb-6">
+                          <input type="text" id="{{$detail_tour->namatour}}" for="namauser"   name="namauser"  value="{{ Auth::user()->nama }}" readonly class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mr-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <input type="text" id="{{$detail_tour->namatour}}" for="durasi"  name="durasi"    value="{{ $detail_tour->durasi }}"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ml-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="namatour"   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Tour</label>
+                        <input type="text"  name="namatour" id="{{$detail_tour->namatour}}"  value="{{ $detail_tour->namatour }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nama Lengkap" >
+                    </div>
+                    <div class="mb-6">
+                        <label for="jumlahorang"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jumlah Orang</label>
+                        <input type="text" id="{{$detail_tour->namatour}}" required="required"  name="jumlahorang" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Jumlah Orang" >
+                    </div>
+                    <div class="mb-6">
+                        <label for="hargasatuan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga Satuan</label>
+                        <input type="text" id="{{$detail_tour->namatour}}"  required="required"  name="hargasatuan"   value="{{ $detail_tour->harga }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  >
+                    </div>
+                    <div class="mb-6">
+                        <label for="hargatotal" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga Total</label>
+                        <input type="text" id="{{$detail_tour->namatour}}"   name="hargatotal"    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  >
+                    </div>
+                    <div class="mb-6">
+                      <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih Tanggal </label>
+                      <div class="relative w-full mb-6">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                          </svg>
+                        </div>
+                        <input datepicker id="{{$detail_tour->namatour}}" required="required" for="tanggalberangkat"  name="tanggalberangkat"  type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                      </div>
+                    <div class="#">      
+                        <button type="submit" class="text-white bg-yellow-500 hover:bg-gray-900 focus:ring-4 font-medium rounded-lg text-sm w-full sm:w-auto  px-5 py-2.5 text-center">Bayar</button>   
+                    </div>              
+                </form>
             </div>
           </div>
         </div>
@@ -185,6 +168,7 @@
         </div>
       </div>
     </section>
+
   </body>
 </html>
 @endsection

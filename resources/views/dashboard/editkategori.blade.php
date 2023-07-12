@@ -1,13 +1,8 @@
-@include('admin.header')
-
-@include('admin.navbar')
-
-@include('sweetalert::alert')
-
-@include('admin.sidebar')
+@extends('dashboard.layouts.app')
+@section('content')
 
 
-    <div class="content-wrapper" style="min-height: 2080.4px;">
+<div class="content-wrapper" style="min-height: 2080.4px;">
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row">
@@ -30,11 +25,11 @@
                             <div class="card-header">
                                 <h4 class="text-center ">Edit Data Kategori</h4>
                             </div>
-                            <form action="{{ url('/kategoritour/update/'.$kategori->id) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ url('/kategoritour/update/'.$kategori->id_kategori) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('put')
                                 <div class="card-body">
-                                <input type="hidden" name="id" value="{{ $kategori->id }}">
+                                <input type="hidden" name="id" value="{{ $kategori->id_kategori }}">
                                     <div class="form-group">
                                         <label for="nama">Image</label>
                                         <input type="file" class="form-control"  value="{{ $kategori->image}}" name="image">
@@ -57,6 +52,4 @@
     </div>
 
 
-@include('admin.footer')
-
-
+@endsection

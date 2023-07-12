@@ -62,10 +62,12 @@
     <section class="font-inter" >   
         <div class="container px-24 pt-4 pb-24 mx-auto">          
                 <div class="flex flex-wrap -m-4 font-inter">
+                
                 @foreach($tour as $item)
+                    @if($item->status == 2)
                     <div class="xl:w-1/4 md:w-1/2 sm:w-1/1 p-4 mx-auto">                           
                         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                            <a href="/{{ ($item->id) }}#{{$item->namatour}}">
+                            <a href="/{{ ($item->id_tour) }}#{{$item->namatour}}">
                                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
                                     <img class=" rounded w-full object-cover hover:scale-110 transition duration-300 ease-in-out  object-center  " src="{{asset('storage/image/tour/'.$item->image)}}" alt="content">
                                 </div>
@@ -75,14 +77,14 @@
                                     <p class="tracking-widest text-sm title-font font-semibold italic text-gray-400 mb-1">24-05-2023</p>
                                     <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ $item->kategori }}</span>
                                 </div>                             
-                                <a href="/{{ ($item->id) }}#{{$item->namatour}}">
+                                <a href="/{{ ($item->id_tour) }}#{{$item->namatour}}">
                                     <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-gray-400 dark:text-white">{{ $item->namatour }}</h5>
                                 </a>
                                 <p class="flex items-center font-semibold text-gray-400 mb-4">
                                     <span class="mr-2">
                                         <i class="fa-solid fa-calendar-days"></i>
                                     </span>                        
-                                    {{ $item->tanggalberangkat }}
+                                    {{ $item->durasi }}
                                 </p>
                                 <p class="font-semibold text-gray-400 dark:text-gray-400">Start From</p>
                                 <div class="flex items-center justify-between">
@@ -94,6 +96,8 @@
                             </div>
                         </div>
                     </div>
+                    @else
+                    @endif
                 @endforeach           
                 </div>
             </div>

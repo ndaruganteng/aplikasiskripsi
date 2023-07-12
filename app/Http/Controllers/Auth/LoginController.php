@@ -14,86 +14,45 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-//     public function login(Request $request)
-// {
-    
-//     $request->validate([
-//         'email' => 'required|email',
-//         'password' => 'required',
-//     ]);
+        $data = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
 
-//     $data = [
-//         'email' => $request->email,
-//         'password' => $request->password
-//     ];
+        if (Auth::attempt($data)) {
+            $request->session()->regenerate();
 
-//     if (Auth::attempt($data)) {
-//         $request->session()->regenerate();
+            // Get the logged-in user and their role
+            $user = Auth::user();
+            $role = $user->role;
 
-//         // Periksa level pengguna setelah berhasil login
-//         $user = Auth::user();
-//         if ( $user->role == 'admin') 
-//         {
-//             alert()->success('Berhasil','Anda Berhasil Login');
-//             return redirect('/admin');
-//         }
-
-//         elseif ($user->role == 'wisatawan') {
-//             alert()->success('Berhasil','Anda Berhasil Login');
-//             return redirect('/home');
-//         } 
-//         else {
-//             // Level pengguna tidak valid
-//             Auth::logout();
-//             Session::flash('error', 'Level pengguna tidak valid');
-//             return redirect('/login');
-//         }
-//     } else {
-//         Session::flash('error', 'Email atau Password Salah');
-//         return redirect('/login');
-//     }
-// }
-public function login(Request $request)
-{
-    $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
-
-    $data = [
-        'email' => $request->email,
-        'password' => $request->password
-    ];
-
-    if (Auth::attempt($data)) {
-        $request->session()->regenerate();
-
-        // Get the logged-in user and their role
-        $user = Auth::user();
-        $role = $user->role;
-
-        if ($role == 'admin') {
-            alert()->success('Berhasil', 'Anda Berhasil Login');
-            return redirect('/admin');
-        } elseif ($role == 'wisatawan') {
-            alert()->success('Berhasil', 'Anda Berhasil Login');
-            return redirect('/home');
-        } elseif ($role == 'biro') {
-            alert()->success('Berhasil', 'Anda Berhasil Login');
-            return redirect('/dashboard');
+            if ($role == 'admin') {
+                alert()->success('Berhasil', 'Anda Berhasil Login');
+                return redirect('/dashboard');
+            } elseif ($role == 'user') {
+                alert()->success('Berhasil', 'Anda Berhasil Login');
+                return redirect('/home');
+            } elseif ($role == 'biro') {
+                alert()->success('Berhasil', 'Anda Berhasil Login');
+                return redirect('/dashboard');
+            } else {
+                // Invalid user role
+                Auth::logout();
+                Session::flash('error', 'Level pengguna tidak valid');
+                return redirect('/login');
+            }
         } else {
-            // Invalid user role
-            Auth::logout();
-            Session::flash('error', 'Level pengguna tidak valid');
+            Session::flash('error', 'Email atau Password Salah');
             return redirect('/login');
         }
-    } else {
-        Session::flash('error', 'Email atau Password Salah');
-        return redirect('/login');
     }
-}
-
 
      public function logout(Request $request){
         Auth::logout();

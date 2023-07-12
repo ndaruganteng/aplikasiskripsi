@@ -37,7 +37,6 @@
   </head>
 
   <body class="bg-white">
-  <!-- Example -->
   <div class="flex min-h-screen">
 
     <!-- Container -->
@@ -51,13 +50,15 @@
           <a href="#" class="font-medium text-xl">Thelema</a>
         </div>
         <div class='space-y-5'>
-          <h1 class="lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">Create your account and discover new
-            experiences</h1>
-          <button
-            class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">Create
-            account here</button>
+          <h1 class="lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">
+            Buat akun dan temukan pengalaman baru
+          </h1>
+          <a href="{{ route('login.index') }}"
+              class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
+               Kembali <i class="fa-solid fa-arrow-left"></i>
+          </a>
         </div>
-        <p class="font-medium">© 2022 Company</p>
+        <p class="font-medium">Thelema ©2023</p>
       </div>
 
       <!-- Login -->
@@ -78,7 +79,7 @@
         <div class="flex flex-1 flex-col  justify-center space-y-5 max-w-md">
           <div class="flex flex-col space-y-2 text-center">
             <h2 class="text-3xl md:text-4xl font-bold"> Create your account </h2>
-            <p class="text-md md:text-xl">Sign up or log in to place the order,no password require!</p>
+            <p class="text-md md:text-xl">Daftar atau masuk untuk temukan pengalaman baru!</p>
           </div>
           <form action="/register" method="POST">
           @csrf
@@ -93,11 +94,6 @@
               <button type="submit" class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
                 Sign in
               </button>
-              <div class="flex justify-center items-center">
-                <span class="w-full border border-black"></span>
-                <span class="px-4">Or</span>
-                <span class="w-full border border-black"></span>
-              </div>
             </div>
           </form>
 

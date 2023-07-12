@@ -1,11 +1,5 @@
-            
-@include('admin.header')
-
-@include('sweetalert::alert')
-
-@include('admin.navbar')
-
-@include('admin.sidebar')
+@extends('dashboard.layouts.app')
+@section('content')
 
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
@@ -16,7 +10,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
                     <li class="breadcrumb-item active">Kategori Tour</li>
                     </ol>
                 </div>
@@ -64,12 +58,12 @@
                                         <td>{{ $p->namakategori}}</td>
                                         <td>
                                             <div class="btn flex">
-                                                <a href="/kategoritour/edit/{{ $p->id }}">
+                                                <a href="/kategoritour/edit/{{ $p->id_kategori }}">
                                                     <button type="button" class="btn btn-warning">
                                                         <i class="fa-solid fa-pen-to-square"></i> 
                                                     </button> 
                                                 </a>
-                                                <a href="/kategoritour/hapus/{{ $p->id }}">
+                                                <a href="/kategoritour/hapus/{{ $p->id_kategori }}">
                                                     <button type="button" class="btn btn-danger">
                                                         <i class="fa-solid fa-trash-can"></i> 
                                                     </button> 
@@ -91,5 +85,4 @@
     </section>
 </div>
 
-
-@include('admin.footer')
+@endsection

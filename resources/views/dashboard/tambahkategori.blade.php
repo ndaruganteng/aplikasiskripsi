@@ -1,11 +1,5 @@
-@include('admin.header')
-
-@include('admin.navbar')
-
-@include('admin.sidebar')
-
-@include('sweetalert::alert')
-
+@extends('dashboard.layouts.app')
+@section('content')
 
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
@@ -54,5 +48,4 @@
     </div>
 </div>
 
-
-@include('admin.footer')
+@endsection

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Models\user;
 use App\Http\Controllers\Controller;
@@ -12,12 +12,12 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
-class ManajemenusermemberController extends Controller
+class ManajemenuserController extends Controller
 {
     public function index()
     {   
         // mengambil data dari table tour
     	$users = DB::table('users')->simplepaginate(5);
-        return view('admin.manajemenusermember',['users' => $users]);
+        return view('dashboard.manajemenuser',['users' => $users]);
     }
 }

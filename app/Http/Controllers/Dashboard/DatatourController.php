@@ -35,9 +35,7 @@ class DatatourController extends Controller
             'namatour' => 'required',
             'kategori' => 'required',
             'highlight' => 'required',
-            'kuota' => 'required',
-            'tanggalberangkat' => 'required',
-            'tanggalberakhir' => 'required',
+            'durasi' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
             'fasilitas' => 'required',
@@ -49,9 +47,7 @@ class DatatourController extends Controller
             "namatour.required" => "Please enter nama tour",
             "kategori.required" => "Please enter kategori",
             "highlight.required" => "Please enter highlight",
-            "kuota.required" => "Please enter kuota",
-            "tanggalberangkat.required" => "Please enter tanggalberangkat",
-            "tanggalberakhir.required" => "Please enter tanggalberakhir",
+            "durasi.required" => "Please enter Durasi",
             "harga.required" => "Please enter harga",
             "deskripsi.required" => "Please enter deskripsi",
             "fasilitas.required" => "Please enter fasilitas",
@@ -64,13 +60,12 @@ class DatatourController extends Controller
         $tour->namatour= $request->input('namatour');
         $tour->kategori= $request->input('kategori');
         $tour->highlight= $request->input('highlight');
-        $tour->kuota= $request->input('kuota');
-        $tour->tanggalberangkat= $request->input('tanggalberangkat');
-        $tour->tanggalberakhir= $request->input('tanggalberakhir');
+        $tour->durasi= $request->input('durasi');
         $tour->harga= $request->input('harga');
         $tour->deskripsi= $request->input('deskripsi');
         $tour->fasilitas= $request->input('fasilitas');
         $tour->lokasi= $request->input('lokasi');
+        $tour->status= null;
         if($request->hasFile('image')){
             $file = $request->file('image');
             $extention = $file->getClientOriginalExtension();
@@ -98,7 +93,7 @@ class DatatourController extends Controller
     }
 
 
-    // update data tour
+    // edit data tour
     public function update(Request $request,$id)
     {
         $tour = Tour ::find($id); 
@@ -108,9 +103,7 @@ class DatatourController extends Controller
             'namatour' => 'required',
             'kategori' => 'required',
             'highlight' => 'required',
-            'kuota' => 'required',
-            'tanggalberangkat' => 'required',
-            'tanggalberakhir' => 'required',
+            'durasi' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
             'fasilitas' => 'required',
@@ -122,9 +115,7 @@ class DatatourController extends Controller
             "namatour.required" => "Please enter nama tour",
             "kategori.required" => "Please enter kategori",
             "highlight.required" => "Please enter highlight",
-            "kuota.required" => "Please enter kuota",
-            "tanggalberangkat.required" => "Please enter tanggalberangkat",
-            "tanggalberakhir.required" => "Please enter tanggalberakhir",
+            "durasi.required" => "Please enter durasi",
             "harga.required" => "Please enter harga",
             "deskripsi.required" => "Please enter deskripsi",
             "fasilitas.required" => "Please enter fasilitas",
@@ -145,9 +136,7 @@ class DatatourController extends Controller
         $tour->namatour = $request->namatour;
         $tour->kategori = $request->kategori;
         $tour->highlight = $request->highlight;
-        $tour->kuota = $request->kuota;
-        $tour->tanggalberangkat = $request->tanggalberangkat;
-        $tour->tanggalberakhir = $request->tanggalberakhir;
+        $tour->durasi = $request->durasi;
         $tour->harga = $request->harga;
         $tour->deskripsi = $request->deskripsi;
         $tour->fasilitas = $request->fasilitas;
@@ -175,6 +164,23 @@ class DatatourController extends Controller
  
          return $id;
      }
+
+    //  approve tampilan tour
+     public function manajementour()
+     {  $tour = DB::table('tour')->simplepaginate(5);
+         return view('dashboard.manajementour',['tour' => $tour]);
+     }
+
+    //  fungsi approve
+    public function approve (Request $request, $id){
+        $approve = DB::table('tour')
+                    -> where('id_tour',$id)
+                    ->update([
+                        'status'=> 2
+                    ]);
+
+        return redirect('manajementour')->with('toast_success','Data Telah Diupdate');
+    }
 
 
 }

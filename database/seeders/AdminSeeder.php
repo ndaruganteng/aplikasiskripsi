@@ -27,7 +27,7 @@ class AdminSeeder extends Seeder
         DB::table('users')->insert([
             'nama' => 'ndaru',
             'image' => 'None',
-            'role' => 'wisatawan',
+            'role' => 'user',
             'username' => 'ndaru24',
             'password' => bcrypt("ndaru123"),
             'no_hp' => '085647019630',
@@ -42,15 +42,6 @@ class AdminSeeder extends Seeder
             'no_hp' => '085647019630',
             'email' => 'riansadboy@gmail.com',
         ]);
-        // DB::table('users')->insert([
-        //     'nama' => 'Rian',
-        //     'image' => 'None',
-        //     'level' => 'User',
-        //     'status' => 'Aktif',
-        //     'password' => bcrypt("rian"),
-        //     'no_hp' => '087733',
-        //     'email' => 'rian@gmail.com',
-        // ]);
     }
 }
 

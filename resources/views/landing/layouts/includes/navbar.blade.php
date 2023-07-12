@@ -5,11 +5,11 @@
             <span class="self-center text-xl font-bold whitespace-nowrap dark:text-white">THELEMA</span>
         </a>
         <div class="flex items-center">
-            @if(Auth::check() && Auth::user()->role == 'User')
-                <p class="mr-3 text-sm font-medium text-gray-900 dark:text-white hover:underline">{{ Auth::wisatawan()->nama }}</p>
+            <!-- @if(Auth::check() && Auth::user()->role == 'wisatawan')
+                <p class="mr-3 text-sm font-medium text-gray-900 dark:text-white hover:underline">{{ Auth::user()->nama }}</p>
             @else
-            @endif
-            <!-- <a href="#" class="mr-3 text-sm font-medium text-gray-500 dark:text-white hover:underline">Jamal</a> -->
+            @endif -->
+            <a href="#" class="mr-3 text-sm font-medium text-gray-500 dark:text-white hover:underline">Jamal</a>
             <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                 <span class="sr-only">Open user menu</span>
                 <img class="w-8 h-8 " src="images/icon/profile.png" alt="user photo">
@@ -48,7 +48,7 @@
                     <a href="{{ route('tour.index') }}" class="text-white dark:text-white hover:underline">Tour</a>
                 </li>
                 <li>
-                    <a href="{{ route('mitra.index') }}" class="text-white dark:text-white hover:underline">Daftar Mitra</a>
+                    <a href="{{ route('tambahmitra.index') }}" class="text-white dark:text-white hover:underline">Daftar Mitra</a>
                 </li>
             </ul>
         </div>

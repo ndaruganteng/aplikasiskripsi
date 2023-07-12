@@ -4,16 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\carbon;
 
-class kategori extends Model
+class mitra extends Model
 {
     use HasFactory;
-
-    protected $table = 'kategori';
-    protected $primaryKey = 'id_kategori';
+    protected $table = 'mitra';
     protected $fillable = [
         'image',
-        'namakategori',
+        'nama',
+        'email',
+        'nohp',
+        'alamat',
     ];
 }

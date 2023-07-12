@@ -1,10 +1,5 @@
-
-
-@include('admin.header')
-
-@include('admin.navbar')
-
-@include('admin.sidebar')
+@extends('dashboard.layouts.app')
+@section('content')
 
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
@@ -15,7 +10,7 @@
                 </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
                     <li class="breadcrumb-item active">Manajemen User</li>
                 </ol>
             </div>
@@ -89,6 +84,6 @@
             </div>
         </div>
     </section>
-</div>        
+</div>  
 
-@include('admin.footer')
+@endsection

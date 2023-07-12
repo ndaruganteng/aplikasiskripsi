@@ -1,32 +1,33 @@
 @extends('dashboard.layouts.app')
 @section('content')
 
-
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6">
-                    <h3 class="m-0">View Data Tour</h3>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
-                    <li class="breadcrumb-item active">View Data Tour</li>
-                    </ol>
-                </div>
+            <div class="col-sm-6">
+                <h1 class="m-0">Manajemen Tour</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
+                <li class="breadcrumb-item active">Manajemen Tour</li>
+                </ol>
+            </div>
             </div>
         </div>
     </div>
-    <div class="content">
+    <!-- Main content -->
+    <section class="content ">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card ">
+                    <div class="card">
                         <div class="card-header">
-                            <div class="card-title">
-                                <div class="input-group input-group-md" style="width: 200px;">
-                                    <input type="text" name="table_search" class="form-control float-left" placeholder="Search">
+                            <h3 class="card-title">Data Tour</h3>
+                            <div class="card-tools">
+                                <div class="input-group input-group-sm" style="width: 150px;">
+                                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
                                     <div class="input-group-append">
                                         <button type="submit" class="btn btn-secondary">
                                             <i class="fas fa-search"></i>
@@ -34,19 +35,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-tools">
-                                    <a href="{{ route('tambahtour.index') }}">
-                                        <button type="submit" class="btn float-right btn-secondary">
-                                            Tambah Tour
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </a>
-                            </div>
                         </div>
                         <div class="card-body table-responsive">
-                            <table class="table table-hover dataTable dtr-inline collapsed">
+                            <table class="table ">
                                 <thead>
-                                    <tr class="text-center fs-6">
+                                    <tr class="text-center ">
                                         <th>Image</th>
                                         <th>Nama biro</th>
                                         <th>Nama tour</th>
@@ -72,41 +65,40 @@
                                             @if($p->status == null)
                                             <div class="badge badge-warning">Belum disetuji </div>
                                             @else($p->status == 2)
-                                            <div class="badge badge-success"> Disetuji</div>       
+                                            <div class="badge badge-success"> Disetuji</div>
+                     
                                             @endif
                                         </td>
                                         <td>
-                                            <div class="btn flex">
-                                                <a href="/datatour/edit/{{ $p->id_tour }}" >
-                                                    <button type="button" class="btn btn-warning text-white">
-                                                        <i class="fa-solid fa-pen-to-square"></i>        
-                                                    </button>
-                                                </a>
+                                            @if($p->status == null)
+
+                                            <form  method="post" action="{{route('approve', ['id_tour'=> $p->id_tour])}}">
+                                                @csrf
+                                                @method('put')
+                                                <button type="submit" class="btn btn-success">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </button>
+                                            </form>
+                                            @else
                                                 <a href="/datatour/hapus/{{ $p->id_tour }}">
                                                     <button type="button"  class="btn btn-danger">
                                                         <i class="fa-solid fa-trash-can"></i>
                                                     </button>
                                                 </a>
-                                                <a href="{{ route('detail-datatour.index') }}">
-                                                    <button type="submit"  class="btn btn-primary"  value="Submit">
-                                                        <i class="fa-solid fa-eye"></i>
-                                                    </button>
-                                                </a>
-                                            </div>
+                                            @endif
                                         </td>
                                     </tr>
                                 </tbody>
                                 @endforeach
                             </table>
                             <div class="pt-3">
-                                {{ $tour->links() }}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 @endsection

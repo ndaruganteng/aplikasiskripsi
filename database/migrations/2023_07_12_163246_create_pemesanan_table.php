@@ -11,18 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tour', function (Blueprint $table) {
-            $table->id('id_tour');
-            $table->string ('image')->default("");
-            $table->string('namabiro');
+        Schema::create('pemesanan', function (Blueprint $table) {
+            $table->id('id_pemesanan');
+            $table->string ('buktitf')->nullable();
+            $table->string('namauser');
             $table->string('namatour');
-            $table->string('kategori');
-            $table->string('highlight');
             $table->string('durasi');
-            $table->string('harga');
-            $table->string('deskripsi',9000);
-            $table->string('fasilitas');
-            $table->string('lokasi');
+            $table->string('jumlahorang');
+            $table->string('hargasatuan');
+            $table->string('hargatotal');
+            $table->string('tanggalberangkat');
             $table->string('status')->nullable();
             $table->timestamps();
         });
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tour');
+        Schema::dropIfExists('pemesanan');
     }
 };

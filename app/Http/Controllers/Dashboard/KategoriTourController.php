@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Models\kategori;
 use App\Http\Controllers\Controller;
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 
-class KategoritourController extends Controller
+class KategoriTourController extends Controller
 {
     // public function index()
     // {
@@ -24,13 +24,13 @@ class KategoritourController extends Controller
         // mengambil data dari table kategori
     	$kategori = DB::table('kategori')->simplepaginate(5);
 
-        return view('admin.kategoritour',['kategori' => $kategori]);
+        return view('dashboard.kategoritour',['kategori' => $kategori]);
     }
 
     public function tambah()
     {
 	// memanggil view tambah kategori
-	    return view('admin.tambahkategori');
+	    return view('dashboard.tambahkategori');
     }
 
     public function store(Request $request)
@@ -66,7 +66,7 @@ class KategoritourController extends Controller
     
             $kategori = Kategori:: find($id);
     
-            return view('admin.editkategori', [
+            return view('dashboard.editkategori', [
                 'method'=> "PUT",
                 'action'=> "/kategoritour/edit/{id}'",
                 'kategori'=> $kategori

@@ -1,11 +1,5 @@
-
-@include('dashboard.header')
-
-@include('dashboard.navbar')
-
-@include('dashboard.sidebar')
-
-@include('sweetalert::alert')
+@extends('dashboard.layouts.app')
+@section('content')
 
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
@@ -42,72 +36,89 @@
                             </div>
                         </div>
                         <div class="card-body table-responsive">
-                            <table class="table ">
+                            <table class="table table-stiped">
                                 <thead>
                                     <tr class="text-center fs-6">
-                                        <th>Kode Booking</th>                                                                                     
+                                        <th>Nama </th>                                                                                     
                                         <th>Nama Tour</th>                                
-                                        <th>Jumlah Orang</th>                                
-                                        <th>Waktu Pemesanan</th>
-                                        <th>Status Pemesanan</th>
+                                        <th>Durasi</th>                                
+                                        <th>Harga/pax</th>
+                                        <th>Harga Total</th>
+                                        <th>jumlahorang</th> 
+                                        <th>Tanggal Berangkat</th> 
+                                        <th>Bukti Transfer</th>
+                                        <th>Status</th>  
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
+                                
                                 <tbody class="fs-6">
+                                @foreach($pemesanan as $p)
                                     <tr class="text-center text-break">
-                                        <td>1234567890</td>
-                                        <td>Open Trip Tour Wisata Labuan Bajo</td>
-                                        <td>20</td>
-                                        <td>26-02-2023 02.00</td>
-                                        <td>Berhasil</td>
+                                        <td>{{ $p->namauser}}</td>
+                                        <td>{{ $p->namatour}}</td>
+                                        <td>{{ $p->durasi}}</td>
+                                        <td>{{ $p->hargasatuan}}</td>
+                                        <td>{{ $p->hargatotal}}</td>
+                                        <td>{{ $p->jumlahorang}}</td>
+                                        <td>{{ $p->tanggalberangkat}}</td>
                                         <td>
-                                            <div>
-                                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#buktiModal">
-                                                    <i class="fa-solid fa-image"></i>
+                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#buktiModal{{$p->id_pemesanan}}">
+                                                <i class="fa-solid fa-image"></i>
+                                            </button>
+                                        </td>
+                                        <td class="font-weight-medium">
+                                            @if($p->status == null)
+                                            <div class="badge badge-warning">Belum disetuji </div>
+                                            @else($p->status == 2)
+                                            <div class="badge badge-success"> Disetuji</div>
+                     
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($p->status == null)
+
+                                            <form  method="post" action="{{route('konfirmasi', ['id_pemesanan'=> $p->id_pemesanan])}}">
+                                                @csrf
+                                                @method('put')
+                                                <button type="submit" class="btn btn-success">
+                                                    <i class="fa-solid fa-check"></i>
                                                 </button>
-                                                <a href="#">
+                                            </form>
+                                            @else
+                                                <a href="/cart/hapus/{{ $p->id_pemesanan }}">
                                                     <button type="button"  class="btn btn-danger">
                                                         <i class="fa-solid fa-trash-can"></i>
                                                     </button>
                                                 </a>
-                                                <a href="{{ route('detail-order.index') }}">
-                                                    <button type="submit"  class="btn btn-primary"  value="Submit">
-                                                        <i class="fa-solid fa-eye"></i>
-                                                    </button>
-                                                </a>
-                                        
-                                            </div>
+                                            @endif
                                         </td>
                                     </tr>
+                                    <div class="modal fade" id="buktiModal{{$p->id_pemesanan}}" tabindex="-1" role="dialog" aria-labelledby="buktiModalLabel{{$p->id_pemesanan}}" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="buktiModalLabel">Image Bukti Transfer </h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                            <div class="modal-body">
+                                                <div class="img-fluid">
+                                                    <img src="{{asset('storage/image/bukti-transfer/'.$p->buktitf)}}" class="img-fluid" alt="" />
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>      
+                                    @endforeach
                                 </tbody>
+                                
+                       
+                                
                             </table>
                         </div>
-                        <!-- <div class="card-footer clearfix">
-                            <ul class="pagination pagination-sm m-0 float-right">
-                                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">»</a></li>
-                            </ul>
-                        </div> -->
-                        <div class="modal fade" id="buktiModal" tabindex="-1" role="dialog" aria-labelledby="buktiModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="buktiModalLabel">Image Bukti Transfer </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                <div class="modal-body">
-                                    <div class="img-fluid">
-                                        <img src="images/background/bukti.jpg" class="img-fluid" alt="" />
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -115,4 +126,4 @@
     </div>
 </div>
 
-@include('dashboard.footer')
+@endsection

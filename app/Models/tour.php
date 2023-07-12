@@ -11,19 +11,19 @@ class tour extends Model
     use HasFactory;
 
     protected $table = 'tour';
+    protected $primaryKey = 'id_tour';
     protected $fillable = [
         'image',
         'namabiro',
         'namatour',
         'kategori',
         'highlight',
-        'kuota',
-        'tanggalberangkat',
-        'tanggalberakhir',
+        'durasi',
         'harga',
         'deskripsi',
         'fasilitas',
         'lokasi',
+        'status',
     ];
 
     public function getFromDateAttribute() {

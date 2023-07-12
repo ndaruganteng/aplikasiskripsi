@@ -2,10 +2,6 @@
 
 namespace App\Http\Controllers\Auth;
 
-// use App\Http\Controllers\Controller;
-// use Illuminate\Http\Request;
-// use App\Models\User;
-
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -51,8 +47,7 @@ class RegisterController extends Controller
             $user->nama = $request->input('nama');
             $user->username = $request->input('username');
             $user->email = $request->input('email');
-
-            $user->role = ($request->input('role') === 'wisatawan') ? 'wisatawan' : 'wisatawan';
+            $user->role = ($request->input('role') === 'user') ? 'user' : 'user';
             $password = $request->input('password');
             if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/', $password)) {
                 alert()->error('Gagal', 'Password harus mengandung setidaknya satu huruf kecil, satu huruf besar, dan satu angka.');

@@ -1,11 +1,5 @@
-
-@include('dashboard.header')
-
-@include('dashboard.navbar')
-
-@include('dashboard.sidebar')
-
-@include('sweetalert::alert')
+@extends('dashboard.layouts.app')
+@section('content')
 
 <div class="content-wrapper" style="min-height: 2080.4px;">
     <div class="content-header">
@@ -77,9 +71,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label  for="kuota" class="col-sm-3 col-form-label">Kuota</label>
+                                            <label  for="durasi" class="col-sm-3 col-form-label">Durasi</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" required="required" name="kuota" placeholder="Masukan Kuota Tour">
+                                                <input type="text" class="form-control" required="required" name="durasi" placeholder="Masukan Kuota Tour">
                                             </div>
                                         </div>
                                     </div>
@@ -92,24 +86,6 @@
                                         </div>
                                     </div>
                                 </div>            
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group row">
-                                            <label for="tanggalberangkat" class="col-sm-3 col-form-label">Tanggal Berangkat</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" required="required" name="tanggalberangkat" placeholder="Tanggal Berangkat">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group row">
-                                            <label for="tanggalberakhir" class="col-sm-3 col-form-label">Tanggal berakhir</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" required="required" name="tanggalberakhir" placeholder="Tanggal berakhir">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <label for="lokasi">Link Lokasi</label>
                                     <input type="text" class="form-control" required="required" name="lokasi"  placeholder="Masukan Link Lokasi Tour" required="required" name="lokasi">
@@ -136,4 +112,4 @@
     </div>
 </div>
 
-@include('dashboard.footer')
+@endsection

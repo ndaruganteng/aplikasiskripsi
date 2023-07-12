@@ -38,7 +38,7 @@
                             <a href="{{ route('tour.index') }}" class="text-white dark:text-white hover:underline">Tour</a>
                         </li>
                         <li>
-                            <a href="{{ route('mitra.index') }}" class="text-white dark:text-white hover:underline">Daftra Mitra</a>
+                            <a href="{{ route('tambahmitra.index') }}" class="text-white dark:text-white hover:underline">Daftra Mitra</a>
                         </li>
                     </ul>
                 </div>
@@ -49,11 +49,11 @@
 
         <!-- hero -->
         <section class="text-gray-600 body-font">
-            <div class="container mx-auto flex px-24 py-24 md:flex-row flex-col items-center">
+            <div class="container mx-auto flex px-24 pb-16 pt-10 md:flex-row flex-col items-center">
                 <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 class="title-font sm:text-4xl xl:text-7xl mb-4 font-bold text-gray-900">Explore A New <br class="hidden lg:inline-block">World.
+                    <h1 class="title-font sm:text-4xl xl:text-7xl mb-4 font-bold text-gray-900">THELEMA <br class="hidden lg:inline-block">MARKETPLACE
                     </h1>
-                    <p class="mb-6 text-2xl text-gray-400">no matther where in the world you want to go, we can help get your there.</p>
+                    <p class="mb-6 text-2xl text-gray-400"> Marketplace yang menjual pruduk berupa paket tour wisata.</p>
                     <a href="{{ route('tour.index') }}" class="flex justify-center">
                         <button class="inline-flex text-white bg-black hover:bg-yellow-500 border-0 py-2 px-12 hover:shadow-lg rounded-xl text-lg">Jelajah</button>
                     </a>
