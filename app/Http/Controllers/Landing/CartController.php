@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\pemesanan;
 
+
 class CartController extends Controller
 {
     // public function index()
@@ -22,6 +23,13 @@ class CartController extends Controller
     {   
         // mengambil data dari table tour
     	$pemesanan = DB::table('pemesanan')->simplepaginate(5);
-        return view('landing.cart',['pemesanan' => $pemesanan]);
+        $rekening = DB::table('rekening')->get();
+        return view('landing.cart',['pemesanan' => $pemesanan, 'rekening' => $rekening]);
     }
+    // public function rekening()
+    // {   
+    //     // mengambil data dari table tour
+    // 	$rekening = DB::table('rekening')->simplepaginate(5);
+    //     return view('landing.cart',['rekening' => $rekening]);
+    // }
 }

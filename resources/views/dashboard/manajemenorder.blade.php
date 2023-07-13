@@ -5,15 +5,15 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row">
-            <div class="col-sm-6">
-                <h1 class="m-0">Manajemen Order</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
-                <li class="breadcrumb-item active">Manajemen Order</li>
-                </ol>
-            </div>
+                <div class="col-sm-6">
+                    <h1 class="m-0">Manajemen Order</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Home</a></li>
+                    <li class="breadcrumb-item active">Manajemen Order</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
@@ -86,7 +86,7 @@
                                                 </button>
                                             </form>
                                             @else
-                                                <a href="/cart/hapus/{{ $p->id_pemesanan }}">
+                                                <a href="/manajemenorder/hapus/{{ $p->id_pemesanan }}">
                                                     <button type="button"  class="btn btn-danger">
                                                         <i class="fa-solid fa-trash-can"></i>
                                                     </button>

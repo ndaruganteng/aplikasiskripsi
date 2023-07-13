@@ -21,19 +21,18 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        // $existingUser = User::where('email', $request->input('email'))->first();
-        // $email = $request->input('email');
-        // $Domain = explode('@', $email);
+        $existingUser = User::where('email', $request->input('email'))->first();
+        $email = $request->input('email');
+        $Domain = explode('@', $email);
     
-        // if ($existingUser) {
+        if ($existingUser) {
            
-        //     alert()->error('Gagal', 'Email sudah digunakan');
-        //     return redirect()->back()->withInput();
-        // } else if (!checkdnsrr($Domain[1],"MX")){
-        //     alert()->error('Gagal', 'Domain email tidak ditemukan');
-        //     return redirect()->back()->withInput();
-        //} 
-        
+            alert()->error('Gagal', 'Email sudah digunakan');
+            return redirect()->back()->withInput();
+        } else if (!checkdnsrr($Domain[1],"MX")){
+            alert()->error('Gagal', 'Domain email tidak ditemukan');
+            return redirect()->back()->withInput();
+        } else{
             alert()->success('Berhasil', 'Akun berhasil dibuat');
             $user = new User();
             // $user->image = $request->input('image');
@@ -66,6 +65,6 @@ class RegisterController extends Controller
             }
             $user->save();
             return redirect()->route('login.index')->with('success', 'Data berhasil ditambahkan');
-        
+        }
     }
 }

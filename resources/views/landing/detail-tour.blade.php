@@ -27,7 +27,7 @@
           <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ $detail_tour->kategori }}</span>
             <h1 class="text-gray-900 text-3xl title-font font-medium mb-2">{{ $detail_tour->namatour }}</h1>
-            <div class="flex mb-4">
+            <!-- <div class="flex mb-4">
               <span class="flex items-center">
                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
@@ -46,13 +46,13 @@
                 </svg>
                 <span class="text-gray-600 ml-3">4 Reviews</span>
               </span>
-            </div>  
+            </div>   -->
             <p class="leading-relaxed mt-4 mb-2 text-lg"> <span class="font-bold text-base">Highlight </span> : {{ $detail_tour->highlight }}</p>
             <p class="leading-relaxed mb-2 text-lg"> <span class="font-bold text-base">Durasi </span> : {{ $detail_tour->durasi }} </p>
-            <p class="text-2xl my-4 font-bold text-yellow-600 ">Rp {{ $detail_tour->harga }}</p>
-            <div class="flex mt-5">
+            <p class="text-2xl my-4 font-bold text-yellow-600 ">Harga : Rp {{ $detail_tour->harga }}</p>
+            <!-- <div class="flex mt-5">
               <a href="{{ route('cart.index') }}" class="text-white bg-black border-0 py-2 px-8 focus:outline-none rounded text-lg">Pesan sekarang</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

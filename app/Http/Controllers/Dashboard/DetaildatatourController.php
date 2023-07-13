@@ -13,10 +13,6 @@ class DetaildatatourController extends Controller
         return view('dashboard.detail-datatour');
     }
 
-    // public function show($id)
-    // {      
-    //     $datatour_detail = tour::findOrFail($id);
-    //     return view('dashboard.detail-datatour', compact('datatour_detail'));
-    // }
+
 
 }

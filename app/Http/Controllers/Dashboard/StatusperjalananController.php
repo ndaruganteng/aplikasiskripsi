@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DetailorderController extends Controller
+class StatusperjalananController extends Controller
 {
     public function index()
     {
-        return view('dashboard.detail-order');
+        return view('dashboard.status-perjalanan');
     }
 }

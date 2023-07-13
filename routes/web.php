@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 // auth
 use App\http\Controllers\auth\LoginController;
 use App\http\Controllers\auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 // user
 use App\http\Controllers\user\UserController;
@@ -38,6 +39,7 @@ use App\http\Controllers\dashboard\DetailorderController;
 use App\http\Controllers\dashboard\DatarekeningController;
 use App\http\Controllers\dashboard\KategoriTourController;
 use App\http\Controllers\dashboard\RiquestmitraController;
+use App\http\Controllers\dashboard\StatusperjalananController;
 
 
 
@@ -53,7 +55,6 @@ use App\http\Controllers\dashboard\RiquestmitraController;
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/tour', [TourController::class, 'index'])->name('tour.index');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/mitra', [MitraController::class, 'index'])->name('mitra.index');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
@@ -81,7 +82,7 @@ Route::get('/manajemenorder', [DetailtourController::class, 'manajemenorder'])->
 Route::get('/manajemenuser', [ManajemenuserController::class, 'index'])->name('manajemenuser.index');
 Route::get('/detail-datatour', [DetaildatatourController::class, 'index'])->name('detail-datatour.index');
 Route::get('/detail-order', [DetailorderController::class, 'index'])->name('detail-order.index');
-// Route::get('/requestmitra', [RiquestmitraController::class, 'index'])->name('requestmitra.index');
+Route::get('/status-perjalanan', [StatusperjalananController::class, 'index'])->name('status-perjalanan.index');
 
 
 
@@ -134,6 +135,8 @@ Route::get('/requestmitra/hapus/{id}', [RiquestmitraController::class, 'hapus'])
 // pemesanan
 Route::post('/boking', [DetailtourController::class, 'store']);
 Route::put('/konfirmasi/{id_pemesanan}', [DetailtourController::class, 'konfirmasi'])->name('konfirmasi');
+Route::get('/manajemenorder/hapus/{id}', [DetailtourController::class, 'hapus'])->name('hapus.index');
+
 
 Route::group(['middleware' => ['auth','ceklevel:user']], function(){
     Route::post('/upload-buktitf/{id}', [DetailtourController::class, 'update'])->name('upload-buktitf');
@@ -142,13 +145,19 @@ Route::group(['middleware' => ['auth','ceklevel:user']], function(){
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function(){
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
     Route::get('/tour', [TourController::class, 'index'])->name('tour.index');
-    Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
     Route::get('/tambahmitra', [RiquestmitraController::class, 'tambah'])->name('tambahmitra.index');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
     Route::get('/detail-tour', [DetailtourController::class, 'index'])->name('detail-tour.index');
-    Route::get('/pesanan', [PesananController::class, 'index'])->name('pesanan.index');
+    Route::get('/pesanan', [DetailtourController::class, 'histori'])->name('pesanan.index');
     Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
     Route::get('/detail-pesanan', [DetailpesananController::class, 'index'])->name('detail-pesanan.index');
    
 });
+
+
+
+Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');

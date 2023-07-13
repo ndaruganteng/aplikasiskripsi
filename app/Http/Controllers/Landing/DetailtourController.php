@@ -8,6 +8,8 @@ use App\Models\tour;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\pemesanan;
+use App\Models\rekening;
+
 
 class DetailtourController extends Controller
 {
@@ -88,16 +90,29 @@ class DetailtourController extends Controller
      public function hapus($id)
      {
          $pemesanan = Pemesanan::find($id);
-         $path = 'storage/image/bukti-transfer/'.$pemesanan->buktitf;
-         if(File::exists($path)){
-             File::delete($path);
-         }
+        //  $path = 'storage/image/bukti-transfer/'.$pemesanan->buktitf;
+        //  if(File::exists($path)){
+        //      File::delete($path);
+        //  }
          $pemesanan->delete();
          
          return back() -> with('toast_info', "Data berhasil dihapus!");
      }
 
     
+     public function histori()
+     
+     {  
+        $pemesanan = DB::table('pemesanan')->simplepaginate(5);
+         return view('landing.pesanan',['pemesanan' => $pemesanan]);
+     }
+
+
+    //  public function bank()
+     
+    //  {  $rekening = DB::table('rekening')->simplepaginate(5);
+    //      return view('landing.cart',['rekening' => $rekening]);
+    //  }
     
 
 }

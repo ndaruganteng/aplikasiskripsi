@@ -47,7 +47,7 @@
             </div>
         </section>
 
-        <section class="text-gray-600 body-font">
+        <!-- <section class="text-gray-600 body-font">
             <div class="container px-40 pb-40 mx-auto">
                 <div class="flex flex-wrap -m-4">
                     <div class="p-4 w-full mx-auto ">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </body>
 </html>
 @endsection

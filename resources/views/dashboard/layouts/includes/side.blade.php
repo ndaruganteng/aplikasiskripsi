@@ -38,6 +38,14 @@
                   </p>
                 </a>
           </li>
+          <li class="nav-item">
+                <a href="{{ route('status-perjalanan.index') }}" class="nav-link">          
+                  <i class="nav-icon fa-solid fa-car"></i>
+                  <p>
+                    Status Perjalanan
+                  </p>
+                </a>
+          </li>
           <li class="nav-item user-panel">
               <a href="{{ route('manajemenorder.index') }}" class="nav-link">          
                 <i class="nav-icon fa-solid fa-cart-shopping"></i>
@@ -80,6 +88,7 @@
                     </p>
                 </a>
           </li>
+
           @endif
           <li class="nav-item">
                 <a href="/logout" class="nav-link">          
