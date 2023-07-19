@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="56x56" href="images/icon/iconbg.png" />
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
+    <script src="../path/to/flowbite/dist/datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/datepicker.min.js"></script>
 </head>
 
 <body class="bg-white">
@@ -29,11 +31,11 @@
             <div class="flex items-center">
                 <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                     <li>
-                        <a href="{{ route('home.index') }}" class="text-white dark:text-white hover:underline"
+                        <a href="{{ route('login.index') }}" class="text-white dark:text-white hover:underline"
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('tour.index') }}" class="text-white dark:text-white hover:underline">Tour</a>
+                        <a href="{{ route('login.index') }}" class="text-white dark:text-white hover:underline">Tour</a>
                     </li>
                     <li>
                         <a href="{{ route('tambahmitra.index') }}"
@@ -51,11 +53,40 @@
                 <h1 class="title-font sm:text-4xl xl:text-7xl mb-4 font-bold text-gray-900">THELEMA <br
                         class="hidden lg:inline-block">MARKETPLACE
                 </h1>
-                <p class="mb-6 text-2xl text-gray-400"> Marketplace yang menjual pruduk berupa paket tour wisata.</p>
-                <a href="{{ route('tour.index') }}" class="flex justify-center">
+                <p class="mb-10 text-2xl text-gray-400"> Marketplace yang menjual pruduk berupa paket tour wisata.</p>
+                <a href="{{ route('login.index') }}" class="flex justify-center">
                     <button
                         class="inline-flex text-white bg-black hover:bg-yellow-500 border-0 py-2 px-12 hover:shadow-lg rounded-xl text-lg">Jelajah</button>
                 </a>
+                <!-- <div >
+                    <form action="{{route('home.search') }}" method="GET">            
+                        <div date-rangepicker class="flex ">
+                            <div class="relative ">
+                                        
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                        </svg>
+                                    </div>
+                                    <input name="start-date" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tanggal Berangkat">          
+                            </div>
+                            <span class="mx-4 text-gray-500">to</span>
+                            <div class="relative ">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                    </svg>
+                                </div>
+                                <input name="end-date" type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tanggal Berakhir">
+                            </div>
+                            <span class="mx-4">
+                                <div>
+                                <button type="submit" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:focus:ring-yellow-900">Yellow</button>
+                                </div>
+                            </span>  
+                        </div>
+                    </form>
+                </div> -->
             </div>
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                 <img class="object-cover object-center rounded" alt="hero" src="images/home/tour.png">
@@ -100,6 +131,43 @@
             </div>
         </div>
     </section>
+
+    <!-- <section class="text-gray-600 body-font">
+      <div class="container px-72 pt-16 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 w-full">
+            <div class=" bg-white py-10  rounded-lg shadow mx-auto" >             
+                <div date-rangepicker class="flex items-center mx-40">
+                    <div class="relative ">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tanggal Berangkat">
+                    </div>
+                    <span class="mx-4 text-gray-500">to</span>
+                    <div class="relative ">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+                        <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tanggal Berakhir">
+                    </div>
+                    <span class="mx-4">
+                        <div>
+                        <button type="button" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:focus:ring-yellow-900">Yellow</button>
+                        </div>
+                    </span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
 
 
     <section class="font-inter">

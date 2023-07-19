@@ -48,6 +48,7 @@
         <div class="wrapper">
 
             @include('dashboard.layouts.includes.side')
+            @include('sweetalert::alert')
             @yield('content')
 
         </div>

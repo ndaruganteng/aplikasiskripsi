@@ -31,15 +31,15 @@
                             <input type="hidden" name="id" id="id" value="{{ $rekening->id }}">
                                 <div class="form-group">
                                     <label for="image">Image</label>
-                                    <input type="file" class="form-control"   value="{{ $rekening->imagerek}}"   name="image">
+                                    <input type="file" class="form-control"   value="{{ $rekening->imagerek}}"   name="imagerek">
                                     <p class="fst-italic text-secondary">size foto maksimal 2 mb dan extensi jpg, png, jpeg</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nama rekening">Nama Rekening</label>
+                                    <label for="namarekening">Nama Rekening</label>
                                     <input type="text" class="form-control"  placeholder="Masukan Nama rekening" value="{{ $rekening->namarekening}}"  name="namarekening">
                                 </div>
                                 <div class="form-group">
-                                    <label for="nama bank">Nama Bank</label>
+                                    <label for="namabank">Nama Bank</label>
                                     <input type="text" class="form-control"  placeholder="Masukan Nama Bank" value="{{ $rekening->namabank}}"  name="namabank">
                                 </div>
                                 <div class="form-group">

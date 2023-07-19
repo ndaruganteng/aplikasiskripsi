@@ -25,7 +25,7 @@
                             <h3 class="text-center ">Input Data Tour</h3>
                         </div>
                         <div class="card-body">
-                            <form class="form-sample" action="{{ url('/datatour/update/'.$tour->id) }}" method="post" enctype="multipart/form-data">
+                            <form class="form-sample" action="{{ url('/datatour/update/'.$tour->id_tour) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('put')
                                 <input type="hidden" name="id" id="id" value="{{ $tour->id }}">
@@ -75,7 +75,7 @@
                                         <div class="form-group row">
                                             <label  for="durasi" class="col-sm-3 col-form-label">durasi</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" value="{{ $tour->durasi}}" name="kuota" placeholder="Masukan Kuota Tour">
+                                                <input type="text" class="form-control" value="{{ $tour->durasi}}" name="durasi" placeholder="Masukan Kuota Tour">
                                             </div>
                                         </div>
                                     </div>
@@ -87,7 +87,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>            
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label for="tanggalberangkat" class="col-sm-3 col-form-label">Tanggal Berangkat</label>
+                                            <input type="date" class="form-control"  value="{{ $tour->tanggalberangkat}}"  name="tanggalberangkat" placeholder="Masukan Tanggal Berangkat Tour">
+                                        </div>
+                                    </div>
+
+                                </div>                        
                                 <div class="form-group">
                                     <label for="lokasi">Link Lokasi</label>
                                     <input type="text" class="form-control" value="{{ $tour->lokasi}}" name="lokasi"  placeholder="Masukan Link Lokasi Tour" required="required" name="lokasi">

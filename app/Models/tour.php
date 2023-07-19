@@ -19,6 +19,8 @@ class tour extends Model
         'kategori',
         'highlight',
         'durasi',
+        'tanggalberangkat',
+        'date',
         'harga',
         'deskripsi',
         'fasilitas',

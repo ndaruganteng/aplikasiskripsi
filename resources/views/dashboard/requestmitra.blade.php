@@ -57,6 +57,7 @@
                                     <thead>
                                         <tr class="text-center fs-6">
                                             <th>Nama Lengkap</th>
+                                            <th>Email</th>
                                             <th>Nama Biro</th>
                                             <th>Alamat </th>
                                             <th>Aksi</th>

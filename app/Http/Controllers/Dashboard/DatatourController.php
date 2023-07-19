@@ -37,6 +37,7 @@ class DatatourController extends Controller
             'highlight' => 'required',
             'durasi' => 'required',
             'harga' => 'required',
+            'tanggalberangkat' => 'required',
             'deskripsi' => 'required',
             'fasilitas' => 'required',
             'lokasi' => 'required',
@@ -49,9 +50,11 @@ class DatatourController extends Controller
             "highlight.required" => "Please enter highlight",
             "durasi.required" => "Please enter Durasi",
             "harga.required" => "Please enter harga",
+            "tanggalberangkat.required" => "Please enter Tanggal Berangkat",
             "deskripsi.required" => "Please enter deskripsi",
             "fasilitas.required" => "Please enter fasilitas",
             "lokasi.required" => "Please enter lokasi",
+            "date.required" => "Please enter date",
         ]);
 
 
@@ -62,10 +65,12 @@ class DatatourController extends Controller
         $tour->highlight= $request->input('highlight');
         $tour->durasi= $request->input('durasi');
         $tour->harga= $request->input('harga');
+        $tour->tanggalberangkat= $request->input('tanggalberangkat');
         $tour->deskripsi= $request->input('deskripsi');
         $tour->fasilitas= $request->input('fasilitas');
         $tour->lokasi= $request->input('lokasi');
         $tour->status= null;
+        $tour['date']= Carbon::now($request->date);
         if($request->hasFile('image')){
             $file = $request->file('image');
             $extention = $file->getClientOriginalExtension();
@@ -104,6 +109,7 @@ class DatatourController extends Controller
             'kategori' => 'required',
             'highlight' => 'required',
             'durasi' => 'required',
+            'tanggalberangkat' => 'required',
             'harga' => 'required',
             'deskripsi' => 'required',
             'fasilitas' => 'required',
@@ -116,10 +122,12 @@ class DatatourController extends Controller
             "kategori.required" => "Please enter kategori",
             "highlight.required" => "Please enter highlight",
             "durasi.required" => "Please enter durasi",
+            "tanggalberangkat.required" => "Please enter Tanggal Berangkat",
             "harga.required" => "Please enter harga",
             "deskripsi.required" => "Please enter deskripsi",
             "fasilitas.required" => "Please enter fasilitas",
             "lokasi.required" => "Please enter lokasi",
+            "date.required" => "Please enter date",
         ]);
 
         if($request->hasFile('image')){
@@ -137,6 +145,7 @@ class DatatourController extends Controller
         $tour->kategori = $request->kategori;
         $tour->highlight = $request->highlight;
         $tour->durasi = $request->durasi;
+        $tour->tanggalberangkat = $request->tanggalberangkat;
         $tour->harga = $request->harga;
         $tour->deskripsi = $request->deskripsi;
         $tour->fasilitas = $request->fasilitas;
@@ -157,7 +166,7 @@ class DatatourController extends Controller
          }
          $tour->delete();
          
-         return back() -> with('toast_info', "Data berhasil dihapus!");
+         return back() -> with('info', "Data berhasil dihapus!");
      }
  
      public function show($id){
@@ -179,7 +188,7 @@ class DatatourController extends Controller
                         'status'=> 2
                     ]);
 
-        return redirect('manajementour')->with('toast_success','Data Telah Diupdate');
+        return redirect('manajementour')->with('success','Tour Telah Diupdate');
     }
 
 

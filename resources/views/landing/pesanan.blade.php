@@ -15,12 +15,12 @@
           />
           
     </head>
-    <body class="bg-gray-100">
+    <body>
 
         <section class="text-gray-600 body-font">
             <div class="container px-40 pt-10 pb-4 mx-auto">
                 <div class="">
-                    <h1 class="sm:text-3xl lg:text-3xl font-semibold title-font text-gray-900 mb-4">Daftar Pesanan</h1>
+                    <h1 class="sm:text-3xl lg:text-3xl font-semibold title-font text-gray-900">Riwayat Pesanan</h1>
                 </div>
             </div>
         </section>
@@ -98,14 +98,15 @@
                                             @endif
                                         </td>
                                         <td class="px-12 py-4">
-                                            <div class="items-center">
-                                                <a href  class=" flex text-white bg-blue-700 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21 14a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4a1 1 0 0 0-2 0v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a1 1 0 0 0-1-1Zm-9.71 1.71a1 1 0 0 0 .33.21a.94.94 0 0 0 .76 0a1 1 0 0 0 .33-.21l4-4a1 1 0 0 0-1.42-1.42L13 12.59V3a1 1 0 0 0-2 0v9.59l-2.29-2.3a1 1 0 1 0-1.42 1.42Z"/></svg>
-                                                    download 
-                                                </a>
-
-                                            </div>
-
+                                            <form action="/kwitansipdf">
+                                            @csrf
+                                                <div class="items-center">
+                                                    <button type="submit"  class=" flex text-white bg-blue-700 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" >
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M21 14a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4a1 1 0 0 0-2 0v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a1 1 0 0 0-1-1Zm-9.71 1.71a1 1 0 0 0 .33.21a.94.94 0 0 0 .76 0a1 1 0 0 0 .33-.21l4-4a1 1 0 0 0-1.42-1.42L13 12.59V3a1 1 0 0 0-2 0v9.59l-2.29-2.3a1 1 0 1 0-1.42 1.42Z"/></svg>
+                                                        download 
+                                                    </button>
+                                                </div>
+                                            </form>
                                         </td>
                                         <!-- <td class="px-12 py-4">
                                             <div class="items-center">
@@ -154,6 +155,14 @@
                 <a href ="{{ route('transaksi.index') }}" class=" mx-auto mt-10 text-white bg-yellow-500  py-2 px-8 focus:outline-none hover:text-white hover:bg-gray-900 rounded-lg text-lg">Lanjut ke Pembayaran</a>
             </div>
         </section> -->
+        <script>
+        function updateHargaTotal() {
+            const jumlahOrang = parseInt(document.getElementById('jumlahorang').value);
+            const hargaSatuan = parseInt(document.getElementById('hargasatuan').value);
+            const hargaTotal = isNaN(jumlahOrang) || isNaN(hargaSatuan) ? '' : jumlahOrang * hargaSatuan;
+            document.getElementById('hargatotal').value = hargaTotal;
+        }
+    </script>
     </body>
 </html>
 @endsection

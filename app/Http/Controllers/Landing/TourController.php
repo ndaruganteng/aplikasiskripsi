@@ -21,7 +21,7 @@ class TourController extends Controller
         
         // Query untuk pencarian tour berdasarkan keyword
         $tour = tour::where('namatour', 'LIKE', '%' . $keyword . '%')
-                    ->orWhere('tanggalberangkat','LIKE', '%' . $keyword . '%')
+                    ->orWhere('namabiro','LIKE', '%' . $keyword . '%')
                     ->orWhere('kategori', 'LIKE', '%' . $keyword . '%')
                     ->orWhere('harga', 'LIKE', '%' . $keyword . '%')
                     ->get();

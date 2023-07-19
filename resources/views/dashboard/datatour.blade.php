@@ -52,7 +52,8 @@
                                         <th>Nama tour</th>
                                         <th>kategori</th>
                                         <th>Harga </th>
-                                        <th>durasi </th>
+                                        <th>Durasi </th>
+                                        <th>Tanggal Berangkat </th>
                                         <th>Status </th>
                                         <th>Aksi</th>
                                     </tr>
@@ -68,7 +69,8 @@
                                         <td>{{ $p->kategori}}</td>
                                         <td>Rp{{ $p->harga}}</td>
                                         <td>{{ $p->durasi}}</td>
-                                        <td class="font-weight-medium">
+                                        <td>{{ $p->tanggalberangkat}}</td>
+                                        <td>
                                             @if($p->status == null)
                                             <div class="badge badge-warning">Belum disetuji </div>
                                             @else($p->status == 2)

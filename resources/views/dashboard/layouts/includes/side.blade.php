@@ -8,9 +8,16 @@
         <div class="image">
           <img src="/images/icon/profile.png" class="img-circle " alt="User Image">
         </div>
+        @if(auth()->user()->role == "biro")
         <div class="info">
-            <a href="{{ route('profile.index') }}" class="d-block">Jamal</a>      
-        </div>   
+            <a href="{{ route('profile.index') }}" class="d-block">{{ Auth::User()->nama }}</a>      
+        </div>
+        @endif   
+        @if(auth()->user()->role == "admin")
+        <div class="info">
+            <a href="{{ route('profile.index') }}" class="d-block">{{ Auth::User()->nama }}</a>      
+        </div>
+        @endif   
       </div>
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -30,7 +37,7 @@
                   </p>
                 </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
                 <a href="{{ route('datarekening.index') }}" class="nav-link">          
                   <i class="nav-icon fa-sharp fa-solid fa-money-check-dollar"></i>
                   <p>
@@ -80,9 +87,9 @@
                   </p>
                 </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item user-panel">
                 <a href="{{ route('requestmitra.index') }}" class="nav-link">          
-                  <i class="nav-icon fa-solid fa-list"></i>
+                  <i class="nav-icon fa-regular fa-envelope"></i>
                     <p>
                       Request Mitra
                     </p>

@@ -35,6 +35,7 @@ class DetailtourController extends Controller
         $pemesanan->hargatotal= $request->input('hargatotal');
         $pemesanan->jumlahorang= $request->input('jumlahorang');
         $pemesanan->tanggalberangkat= $request->input('tanggalberangkat');
+
         $pemesanan->status = null;
         if($request->hasFile('buktitf')){
             $file = $request->file('buktitf');
@@ -82,7 +83,7 @@ class DetailtourController extends Controller
     
         $pemesanan->save(); 
         alert()->success('Berhasil','Bukti TF Berhasil diupload');
-        return redirect()->back()->with('success', 'Bukti Transfer berhasil diupload');
+        return redirect()->back()-> with('toast_success', "Bukti Transfer sudah ke upload!");
     }
 
 
@@ -106,13 +107,5 @@ class DetailtourController extends Controller
         $pemesanan = DB::table('pemesanan')->simplepaginate(5);
          return view('landing.pesanan',['pemesanan' => $pemesanan]);
      }
-
-
-    //  public function bank()
-     
-    //  {  $rekening = DB::table('rekening')->simplepaginate(5);
-    //      return view('landing.cart',['rekening' => $rekening]);
-    //  }
-    
 
 }

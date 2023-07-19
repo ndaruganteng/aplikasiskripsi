@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Models\tour;
 
 
 // auth
@@ -64,8 +66,23 @@ Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 Route::get('/detail-pesanan', [DetailpesananController::class, 'index'])->name('detail-pesanan.index');
 
 // search 
-Route::get('/search',[HomeController::class, 'search'])->name('home.search');
+// Route::get('/search',[HomeController::class, 'search'])->name('home.search');
 Route::get('/cari',[TourController::class, 'cari'])->name('tour.cari');
+
+
+Route::get('/search', function (Request $request) {
+    $startDate = $request->input('start-date');
+    $endDate = $request->input('end-date');
+
+    // Lakukan logika pencarian berdasarkan range tanggal
+
+    // Contoh penggunaan filter pada query Eloquent
+    $tour = tour::whereBetween('tanggalberangkat', [$startDate, $endDate])->get();
+
+    // Tampilkan hasil pencarian ke halaman view
+
+    return view('landing.home', compact('tour'));
+})->name('home.search');
 
 // profile User
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
@@ -102,6 +119,8 @@ Route::post('/tambahtour', [DatatourController::class, 'store'])->name('Tour.ind
 Route::get('/datatour/edit/{id_tour}', [DatatourController::class, 'edit'])->name('edittour.index');
 Route::put('/datatour/update/{id_tour}', [DatatourController::class, 'update'])->name('updateTour.index');
 Route::get('/datatour/hapus/{id_tour}', [DatatourController::class, 'hapus'])->name('hapus.index');
+
+
 Route::pattern('id', '[0-9]+');
 Route::get('/{id}', [DetailtourController::class,'show']);
 Route::put('/approve/{id_tour}', [DatatourController::class, 'approve'])->name('approve');
@@ -152,6 +171,8 @@ Route::group(['middleware' => ['auth', 'ceklevel:user']], function(){
     Route::get('/pesanan', [DetailtourController::class, 'histori'])->name('pesanan.index');
     Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
     Route::get('/detail-pesanan', [DetailpesananController::class, 'index'])->name('detail-pesanan.index');
+    Route::get('/kwitansipdf', [CartController::class, 'kwitansi'])->name('kwitansi');;
+
    
 });
 

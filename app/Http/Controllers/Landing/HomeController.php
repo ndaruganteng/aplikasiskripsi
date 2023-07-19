@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
+
 class HomeController extends Controller
 {
     public function index()
@@ -20,9 +22,10 @@ class HomeController extends Controller
         $keyword = $request->input('search');
         
         // Query untuk pencarian tour berdasarkan keyword
-        $tour = tour::where('namatour', 'LIKE', '%' . $keyword . '%')
-                    ->orWhere('tanggalberangkat', 'LIKE', '%' . $keyword . '%')
-                    ->orWhere('kategori', 'LIKE', '%' . $keyword . '%')
+        $tour = tour::where('tanggalberangkat', 'LIKE', '%' . $keyword . '%')
+                    // ->orWhere('namabiro', 'LIKE', '%' . $keyword . '%')
+                    // ->orWhere('kategori', 'LIKE', '%' . $keyword . '%')
+                    // ->orWhere('harga', 'LIKE', '%' . $keyword . '%')
                     ->get();
         
                     return view('landing.home',compact('tour'));

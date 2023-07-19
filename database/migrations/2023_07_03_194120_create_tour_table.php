@@ -19,11 +19,13 @@ return new class extends Migration
             $table->string('kategori');
             $table->string('highlight');
             $table->string('durasi');
+            $table->string('tanggalberangkat');
             $table->string('harga');
             $table->string('deskripsi',9000);
             $table->string('fasilitas');
             $table->string('lokasi');
             $table->string('status')->nullable();
+            $table->timestamp('date')->nullable();
             $table->timestamps();
         });
     }

@@ -85,7 +85,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>            
+                                </div>                      
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label for="tanggalberangkat" class="col-sm-3 col-form-label">Tanggal Berangkat</label>
+                                            <input type="date" class="form-control" id="tanggalberangkat" required="required" name="tanggalberangkat" placeholder="Masukan Tanggal Berangkat Tour">
+                                        </div>
+                                    </div>
+
+                                </div>                      
                                 <div class="form-group">
                                     <label for="lokasi">Link Lokasi</label>
                                     <input type="text" class="form-control" required="required" name="lokasi"  placeholder="Masukan Link Lokasi Tour" required="required" name="lokasi">
